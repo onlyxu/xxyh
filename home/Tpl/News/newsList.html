@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/kkpager.css" />
+</head>
+<body>
+
+	<div class="rightinfo">
+		<button class="btn btn-success" onclick="addNews()"
+			style="width: 80px; height: 30px; margin-bottom: 10px;">新增</button>
+		<button class="btn btn-info" onclick="deleteall()"
+			style="width: 80px; height: 30px; margin-bottom: 10px;">删除</button>
+		<!-- 主要内容start -->
+		<table class="tablelist" border="1">
+			<thead>
+				<tr>
+					<th width="50"><input type="checkbox" onclick="selectAll()" /></th>
+					<th>标题</th>
+					<th width="80">文章分类</th>
+					<th width="80">发布人</th>
+					<th width="140">发布时间</th>
+					<th width="80">文章状态</th>
+					<th width="100">操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<volist name="items" id="vo" key="i">
+				<tr>
+					<td><input type="checkbox" name="itemid" value="{$vo.id}" />{$i}</td>
+					<td><a href="__ROOT__/index.php/newsinfo?id={$vo.id}">{$vo.title|truncate_cn=50,'',0}</a></td>
+					<td>{$vo.typename}</td>
+					<td>{$vo.writer}</td>
+					<td>{$vo.dtime}</td>
+					<if condition="$vo.enabled eq 0 ">
+					<td>未审核</td>
+					<td>
+					<input type="button" onclick="checkAccept({$vo.id},1)"
+						class="btn btn-primary" style="width: 50px; height: 30px;"
+						value="通过" /> <input type="button"
+						onclick="checkAccept({$vo.id},2)" class="btn btn-warning"
+						style="width: 50px; height: 30px;" value="拒绝" /></td>
+					<else /> <if condition="$vo.enabled eq 1 ">
+					<td>前台显示</td>
+					<td><input type="button" onclick="checkAccept({$vo.id},2)"
+						class="btn btn-warning" style="width: 50px; height: 30px;"
+						value="拒绝" /><input type="button" onclick="editnews({$vo.id})"
+						class="btn btn-info" style="width: 50px; height: 30px;"
+						value="修改" /></td>
+					<else />
+					<td>前台隐藏</td>
+					<td><input type="button" onclick="checkAccept({$vo.id},1)"
+						class="btn btn-info" style="width: 50px; height: 30px;"
+						value="通过" /><input type="button" onclick="editnews({$vo.id})"
+						class="btn btn-warning" style="width: 50px; height: 30px;"
+						value="修改" /></td>
+					</if> </if>
+
+				</tr>
+				</volist>
+			</tbody>
+		</table>
+		<div class="pagin" id="kkpager"></div>
+		<!-- 内容end -->
+	</div>
+
+	<!-- 内容end -->
+	<input type="hidden" id="pagecount" value="{$pagecount}" />
+	<input type="hidden" id="itemscount" value="{$itemscount}" />
+	<input type="hidden" id="pageno" value="{$pageno}" />
+	<input type="hidden" id="size" value="12" />
+	<!-- 底部start -->
+	<include file="Public:script" />
+	<script type="text/javascript" src="__PUBLIC__/js/kkpager.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/index/newslist.js"></script>
+	<!-- 底部end -->
+</body>
+</html>

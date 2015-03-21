@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+</head>
+<body>
+
+	<div class="rightinfo">
+		<!-- 主要内容start -->
+		<form action="__ROOT__/index.php/saveuser" method="post">
+			<input type="hidden" name="id" value="{$user['id']}" />
+			<ul class="forminfo">
+				<li><label>登录账户:</label><span>{$user['loginname']}</span><i></i></li>
+				<li><label>用户姓名:</label><span>{$user['name']}</span><i></i></li>
+				<li><label>用户性别:</label><span>{$user['sex']}</span><i></i></li>
+				<li><label>电话号码:</label><span>{$user['tele']}</span><i></i></li>
+				<li><label>邮&nbsp;&nbsp;箱:</label><span>{$user['email']}</span><i></i></li>
+				<li><label>身份证号:</label><span>{$user['cardid']}</span><i></i></li>
+				<li><label>银行卡号:</label><span>{$user['bankcard']}</span><i></i></li>
+				<li><label>开户银行:</label><span>{$bank['value']}</span><i></i></li>
+				<li><label>推荐人:</label><span>{$user['refuser']}</span><i></i></li>
+				<li><label>收货地址:</label><span>{$user['receiveaddr']}</span><i></i></li>
+				<li><input type="button" onclick="addpay()"
+					class="btn btn-info" value="充值" />&nbsp;&nbsp;<input type="button"
+					onclick="editInfo()" class="btn btn-success" value="编辑" /></li>
+			</ul>
+		</form>
+		<!-- 内容end -->
+	</div>
+	<div class="route_bg">
+		<a href="#">账户信息</a><i class="glyph-icon icon-chevron-right"></i>
+	</div>
+	<div class="rightinfo">
+		<!-- 主要内容start -->
+		<form action="__ROOT__/index.php/saveuser" method="post">
+			<input type="hidden" name="id" value="{$user['id']}" />
+			<ul class="forminfo">
+				<li><label>您的业绩:</label><label>{$user['yeji']}</label> <if
+						condition="($user['formapp'] eq 1)"> <i><a
+						href="javascript:getFormApp()">正在申请报单中心</a></i> </if> <if
+						condition="($user['formapp'] eq 2)"> <i><a href="#">已申请报单中心</a></i>
+					</if> <if
+						condition="($user['formapp'] eq 0) AND ($user['yeji'] gt 5000)">
+					<i><a href="javascript:getFormApp()">报单申请</a></i> </if></li>
+				<li><label>已结提成:</label><label>{$user['ticheng']}</label> <if
+						condition="($user['ticheng'] eq 100) OR ($user['ticheng'] gt 100)">
+					<i> <a href="javascript:getMoney()">提现</a></i> </if></li>
+				<li><label>可结算提成:</label><label>{$balance}</label><i></i></li>
+				<li><label>已消费:</label><label>{$user['xiaofei']}</label><i></i></li>
+			</ul>
+		</form>
+		<!-- 内容end -->
+	</div>
+
+	<!-- 内容end -->
+	 <input type="hidden" id="ticheng" value="{$user['ticheng']}"/>
+	<!-- 底部start -->
+	<include file="Public:script" />
+	<script type="text/javascript" src="__PUBLIC__/js/index/userinfo.js"></script>
+	<!-- 底部end -->
+</body>
+</html>

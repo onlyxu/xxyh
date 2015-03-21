@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/kkpager.css" />
+</head>
+<body>
+
+		<div id="rightinfo">
+			<button class="btn btn-success" onclick="addProduct()"
+				style="width: 80px; height: 30px; margin-bottom: 10px;">新增</button>
+			<button class="btn btn-info" onclick="deleteall()"
+				style="width: 80px; height: 30px; margin-bottom: 10px;">删除</button>
+			<!-- 主要内容start -->
+			<table class="imgtable" border="1">
+				<thead>
+					<tr>
+						<th width="80"><input type="checkbox" onclick="selectAll()" />序号</th>
+						<th width="80">缩略图</th>
+						<th>产品名称</th>
+						<th width="140">发布时间</th>
+						<th width="120">分类名称</th>
+						<th width="120">产品状态</th>
+						<th width="100">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<volist name="items" id="vo" key="i">
+					<tr height="30">
+						<td><input type="checkbox" name="itemid" value="{$vo.id}" />{$i}</td>
+						<td class="imgtd"><img src="{$vo.imgpath}" height="80"
+							width="80" /></td>
+						<td><a href="javascript:proinfo({$vo.id})">{$vo.pname|truncate_cn=20,'',0}</a></td>
+						<td>{$vo.dtime}</td>
+						<td>{$vo.typename}</td>
+						<if condition="$vo.enabled eq 1">
+						<td>前台显示</td>
+						<td><input type="button" onclick="gohide({$vo.id},2)"
+							class="btn btn-warning" style="width: 80px; height: 30px;"
+							value="前台隐藏" /><input type="button" onclick="editinfo({$vo.id})"
+							class="btn btn-info" style="width: 80px; height: 30px;"
+							value="修改" /></td>
+						<else />
+						<td>前台隐藏</td>
+						<td><input type="button" onclick="gohide({$vo.id},1)"
+							class="btn btn-primary" style="width: 80px; height: 30px;"
+							value="前台显示" /><input type="button" onclick="editinfo({$vo.id})"
+							class="btn btn-info" style="width: 80px; height: 30px;"
+							value="修改" /></td>
+						</if>
+					</tr>
+					</volist>
+				</tbody>
+			</table>
+			<!-- 主要内容end -->
+			<!-- 主要内容分页start -->
+			<div class="pagin" id="kkpager"></div>
+			<!-- 主要内容分页end -->
+		</div>
+
+
+	<!-- 内容end -->
+	<input type="hidden" id="pagecount" value="{$pagecount}" />
+	<input type="hidden" id="itemscount" value="{$itemscount}" />
+	<input type="hidden" id="pageno" value="{$pageno}" />
+	<input type="hidden" id="size" value="12" />
+	<!-- 底部start -->
+	<include file="Public:script" />
+	<script type="text/javascript" src="__PUBLIC__/js/kkpager.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/index/productlist.js"></script>
+	<!-- 底部end -->
+</body>
+</html>

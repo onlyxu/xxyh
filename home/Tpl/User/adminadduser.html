@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+</head>
+<body>
+
+	<div class="rightinfo">
+		<!-- 主要内容start -->
+		<form action="__ROOT__/index.php/adduser" method="post">
+		<input type="hidden" name="id" id="id" value="{$user.id}" />
+			<ul class="forminfo">
+				<li><label>登录名:</label><input name="loginname" onblur="checkLoginName()" required="required"  type="text"
+					class="dfinput" value="{$user.loginname}"  /><i></i></li>
+				<li><label>用户角色:</label> <select name="roleid" class="dfinput">
+					<volist name="rolelist" id="role">
+						<if condition="$user['roleid'] eq $role['id']">
+							<option selected="selected" value="{$role.id}">{$role.name}</option>
+							<else/>
+							<option value="{$role.id}">{$role.name}</option>
+						</if>
+					</volist>
+				</select> <i></i></li>
+				<li><label>用户姓名:</label><input name="name" onblur="checkName()" required="required" type="text"
+					class="dfinput" value="{$user.name}"  /><i></i></li>
+				<li><label>用户性别:</label>
+				<if condition="$user.sex eq '男'">
+					男<input name="sex" checked="checked"  type="radio"  value="男"  />&nbsp;&nbsp;
+					女<input name="sex"  type="radio"  value="女"  />
+					<else/>
+					男<input name="sex"   type="radio"  value="男"  />&nbsp;&nbsp;
+					女<input name="sex" checked="checked" type="radio"  value="女"  />
+				</if>
+				<i></i></li>
+				<li><label>电话号码:</label><input name="tele" required="required" type="text"
+					class="dfinput" value="{$user.tele}"  /><i></i></li>
+				<li><label>充值金额:</label><input name="balance" required="required" type="text"
+					class="dfinput" value="{$user.balance}"  /><i></i></li>
+				<li><label>身份证号:</label><input name="cardid" required="required" type="text"
+					class="dfinput" value="{$user.cardid}"  /><i></i></li>
+				<li><label>银行卡号:</label><input name="bankcard" required="required" type="text"
+					class="dfinput" value="{$user.bankcard}" /><i></i></li>
+				<li><label>开户银行:</label>
+				<select name="bankid" class="dfinput">
+				<volist name="bankList" id="bank">
+						<if condition="$user['bankid'] eq $bank['id']">
+							<option selected="selected" value="{$bank.id}">{$bank.value}</option>
+							<else/>
+							<option  value="{$bank.id}">{$bank.value}</option>
+						</if>
+					</volist>
+				</select>
+				<i></i></li>
+				<li><label>推荐人:</label><input name="refuser" required="required" type="text"
+					class="dfinput" value="{$user.refuser}"  /><i></i></li>
+				<li><label>收货地址:</label><input name="receiveaddr" required="required" type="text"
+					class="dfinput" value="{$user.receiveaddr}"  /><i></i></li>
+				<li><label>邮箱:</label><input name="email" required="required" type="text"
+					class="dfinput" value="{$user.email}"  /><i></i></li>
+				<li><label>&nbsp;</label><input type="submit"
+					class="btn btn-success" value="确认保存" /></li>
+			</ul>
+		</form>
+		<!-- 内容end -->
+	</div>
+
+</body>
+</html>

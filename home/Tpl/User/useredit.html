@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+</head>
+<body>
+
+	<div class="rightinfo">
+		<!-- 主要内容start -->
+		<form action="__ROOT__/index.php/saveuser" method="post">
+			<input type="hidden" name="id" value="{$userinfo.id}" />
+			<ul class="forminfo">
+				<li><label>登录账户:</label><input onblur="checkLoginName()" name="loginname" type="text"
+					class="dfinput" value="{$userinfo.loginname}" /><i></i></li>
+				<li><label>用户姓名:</label><input name="name" type="text"
+					class="dfinput" value="{$userinfo.name}" /><i></i></li>
+					<li><label>用户性别:</label>
+				<if condition="$userinfo.sex eq '男'">
+					男<input name="sex" checked="checked"  type="radio"  value="男"  />&nbsp;&nbsp;
+					女<input name="sex"  type="radio"  value="女"  />
+					<else/>
+					男<input name="sex"   type="radio"  value="男"  />&nbsp;&nbsp;
+					女<input name="sex" checked="checked" type="radio"  value="女"  />
+				</if>
+				<i></i></li>
+				<li><label>电话号码:</label><input name="tele" type="text"
+					class="dfinput" value="{$userinfo.tele}" /><i></i></li>
+				<li><label>邮&nbsp;&nbsp;箱:</label><input name="email"
+					type="text" class="dfinput" value="{$userinfo.email}" /><i></i></li>
+				<li><label>身份证号:</label><input name="cardid" type="text"
+					class="dfinput" value="{$userinfo.cardid}" /><i></i></li>
+				<li><label>银行卡号:</label><input name="bankcard" type="text"
+					class="dfinput" value="{$userinfo.bankcard}" /><i></i></li>
+					<li><label>开户银行:</label>
+				<select name="bankid" class="dfinput">
+				<volist name="bankList" id="bank">
+						<if condition="$user['bankid'] eq $bank['id']">
+							<option selected="selected" value="{$bank.id}">{$bank.value}</option>
+							<else/>
+							<option  value="{$bank.id}">{$bank.value}</option>
+						</if>
+					</volist>
+				</select>
+				<i></i></li>
+				<!--  <li><label>推荐人:</label><input name="refuser" type="text" class="dfinput" value="{$userinfo.refuser}" /><i></i></li> -->
+				<li><label>收货地址:</label><input name="receiveaddr" type="text"
+					class="dfinput" value="{$userinfo.receiveaddr}" /><i></i></li>
+				<li><label>&nbsp;</label><input type="submit"
+					class="btn btn-success" value="确认保存" /></li>
+			</ul>
+		</form>
+		<!-- 内容end -->
+	</div>
+
+	<!-- 内容end -->
+</body>
+</html>

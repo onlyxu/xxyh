@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录</title>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css" />
+</head>
+
+<body>
+<div class="loginBg">
+	<div class="loginCent">
+		<form id="loginform" method="post" action="__ROOT__/index.php/login">
+    	<p><input type="text" name="loginname"  class="textUser" /></p>
+        <p><input type="password" name="loginpass" class="textPwd" /></p>
+        <p>&nbsp;</p>
+        <p class="loginBtn">
+        	<a href="javascript:formlogin()"><img src="__PUBLIC__/images/login.png" width="87" height="29" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        	<a href="javascript:formreset()"><img src="__PUBLIC__/images/reset.png" width="87" height="29" /></a>
+        </p>
+       </form>
+    </div>
+</div>
+<include file="Public:script" />
+<script type="text/javascript" src="__PUBLIC__/js/login.js"></script>
+</body>
+</html>

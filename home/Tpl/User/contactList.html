@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/kkpager.css" />
+</head>
+<body>
+
+	<div class="rightinfo">
+		<button class="btn btn-success" onclick="addUser()"
+			style="width: 80px; height: 30px; margin-bottom: 10px;">新增</button>
+		<button class="btn btn-info" onclick="deleteall()"
+			style="width: 80px; height: 30px; margin-bottom: 10px;">删除</button>
+		<!-- 主要内容start -->
+		<table class="tablelist" border="1">
+			<thead>
+				<tr>
+					<th width="80"><input type="checkbox" name="chk" />序号</th>
+					<th width="120">联系人姓名</th>
+					<th width="120">联系人昵称</th>
+					<th width="150">联系人手机</th>
+					<th width="180">联系人邮箱</th>
+					<th>联系人地址</th>
+				</tr>
+			</thead>
+			<tbody>
+				<volist name="items" id="vo" key="i">
+				<tr>
+					<td><input type="checkbox" name="itemid" value="{$vo.id}" />{$i}</td>
+					<td><a href="javascript:editcontact({$vo.id})">{$vo.name}</a></td>
+					<td>{$vo.nickname}</td>
+					<td>{$vo.tele}</td>
+					<td>{$vo.email}</td>
+					<td>{$vo.addr}</td>
+				</tr>
+				</volist>
+			</tbody>
+		</table>
+		<div class="pagin" id="kkpager"></div>
+		<!-- 内容end -->
+	</div>
+
+	<!-- 内容end -->
+	<input type="hidden" id="pagecount" value="{$pagecount}" />
+	<input type="hidden" id="itemscount" value="{$itemscount}" />
+	<input type="hidden" id="pageno" value="{$pageno}" />
+	<input type="hidden" id="size" value="12" />
+	<!-- 底部start -->
+	<include file="Public:script" />
+	<script type="text/javascript" src="__PUBLIC__/js/kkpager.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/index/contact.js"></script>
+	<!-- 底部end -->
+</body>
+</html>

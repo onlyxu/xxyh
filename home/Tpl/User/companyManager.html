@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+</head>
+<body>
+
+	<div class="rightinfo">
+	<empty name="company">
+		<button class="btn btn-success" onclick="goaddCompany()"
+			style="width: 80px; height: 30px; margin-bottom: 10px;">新增</button></empty>
+		<button class="btn btn-warning" onclick="deleteall({$company.id})"
+			style="width: 80px; height: 30px; margin-bottom: 10px;">删除</button>
+		<button class="btn btn-info" onclick="goeditcompany({$company.id})"
+			style="width: 80px; height: 30px; margin-bottom: 10px;">修改</button>
+		<!-- 主要内容start -->
+		<div class="add_right">
+			<div class="add_bo">
+
+				<div class="add_bo">
+					<div class="add_content">
+						<center>
+							<h2>{$company.name}</h2>
+						</center>
+						<br />
+						<p>{$company.desc}</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- 内容end -->
+	</div>
+	<!-- 内容end -->
+	<input type="hidden" id="pagecount" value="{$pagecount}" />
+	<input type="hidden" id="itemscount" value="{$itemscount}" />
+	<input type="hidden" id="pageno" value="{$pageno}" />
+	<input type="hidden" id="size" value="12" />
+	<!-- 底部start -->
+	<include file="Public:script" />
+	<script type="text/javascript"
+		src="__PUBLIC__/js/index/companymanager.js"></script>
+	<!-- 底部end -->
+</body>
+</html>

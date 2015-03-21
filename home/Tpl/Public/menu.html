@@ -1,0 +1,54 @@
+<div class="fl w185">
+		<if condition="!empty($_SESSION['user'])">
+			<volist name="menuList" id="menu" key="i">
+				<div class="clear pt10">
+					<if condition="$menu.urls eq '#'">
+						<h2 class="titleBg" onclick="changemenu(this)"><a href="{$menu.urls}">{$menu.name}</a></h2>
+						<else/>
+						<h2 class="titleBg" onclick="changemenu(this)"><a href="{$menu.urls}" target="mainframe">{$menu.name}</a></h2>
+					</if>
+					<ul class="functionList" style="display: none">
+						 <volist name="childmenuList" id="child" key="j">
+							<if condition="$child['pid'] eq $menu['id']">
+								<if condition="$child['urls'] eq '#'">
+										<li>
+										<p class="title" onclick="setthismenu(this)">
+											<span class="down"><img src="__PUBLIC__/images/down.png" width="5"
+												height="3"></span><span><a href="{$child['urls']}">{$child.name}</a></span>
+										</p><img src="__PUBLIC__/images/line.png" width="185" height="2" class="fl">
+									</li>
+									<else/>
+										<li>
+											<p class="title" onclick="setthismenu(this)">
+												<span class="down"><img src="__PUBLIC__/images/down.png" width="5"
+													height="3"></span><span><a href="{$child['urls']}" target="mainframe">{$child.name}</a></span>
+											</p><img src="__PUBLIC__/images/line.png" width="185" height="2" class="fl">
+										</li>
+								</if>
+
+							</if>
+						 </volist>
+						 </ul>
+				</div>
+
+			</volist>
+ 			<!-- 	<if condition="($user['yeji'] gt 0) OR ($user['yeji'] eq 0) ">
+					<div class="clear pt10">
+					<h2 class="titleBg" onclick="changemenu(this)"><a href="__ROOT__/index.php/goaddmyuser" target="mainframe" >添加用户</a></h2>
+					</div>
+				 </if> -->
+			<else />
+				<div class="clear pt10">
+				<h2 class="titleBg"><a href="__ROOT__/index.php/gologin">登录系统</a></h2>
+				</div>
+				<div class="clear pt10">
+					<h2 class="titleBg"><a href="__ROOT__/index.php/indexproduct" target="mainframe">产品信息</a></h2>
+				</div>
+				<div class="clear pt10">
+					<h2 class="titleBg"><a href="__ROOT__/index.php/indexnews" target="mainframe">内部新闻</a></h2>
+				</div>
+				<div class="clear pt10">
+					<h2 class="titleBg"><a href="__ROOT__/index.php/companyinfo" target="mainframe">公司信息</a></h2>
+				</div>
+		</if>
+</div>

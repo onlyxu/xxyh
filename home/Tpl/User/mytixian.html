@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/kkpager.css" />
+</head>
+<body>
+
+	<div class="rightinfo">
+		<!-- 主要内容start -->
+		<table class="tablelist" border="1">
+			<thead>
+				<tr>
+					<th width="80">序号</th>
+					<th width="120">提现金额</th>
+					<th width="140">提现时间</th>
+					<th width="80">提现状态</th>
+				</tr>
+			</thead>
+			<tbody>
+				<volist name="items" id="vo" key="i">
+				<tr>
+						<td>{$i}</td>
+						<td>{$vo.money}</td>
+						<td>{$vo.dtime}</td>
+					<if condition="$vo.status eq 0">
+						<td>未审核</td>
+						<else />
+						<td>提现成功</td>
+					 </if>
+				</tr>
+				</volist>
+			</tbody>
+		</table>
+		<div class="pagin" id="kkpager"></div>
+		<!-- 内容end -->
+	</div>
+
+	<!-- 内容end -->
+	<input type="hidden" id="pagecount" value="{$pagecount}" />
+	<input type="hidden" id="itemscount" value="{$itemscount}" />
+	<input type="hidden" id="pageno" value="{$pageno}" />
+	<input type="hidden" id="size" value="12" />
+	<!-- 底部start -->
+	<include file="Public:script" />
+	<script type="text/javascript" src="__PUBLIC__/js/kkpager.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/index/mytixian.js"></script>
+	<!-- 底部end -->
+</body>
+</html>

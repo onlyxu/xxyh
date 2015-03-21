@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/kkpager.css" />
+<style type="text/css">
+.money{
+margin-top: 1px;font-family:Arial;font-size: 12px;color: #F40;margin-right:1px;
+}
+a { color:#04D; text-decoration:none;}
+a:hover { color:#F50; text-decoration:underline;}
+.SubCategoryBox {width:700px; margin:0 auto; text-align:center;margin-top:10px;}
+.SubCategoryBox ul { list-style:none;}
+.SubCategoryBox ul li { display:block;  width:33%; line-height:20px;float: left;}
+.showmore { clear:both; text-align:center;padding-top:10px;}
+.showmore a { display:block; width:180px;  line-height:24px; }
+.showmore a span { padding-left:15px; background:url(__PUBLIC__/images/down.gif) no-repeat 0 0;}
+.promoted a { color:#F50;}
+</style>
+</head>
+<body>
+	<!-- 主要内容start -->
+	<div class="add_right margin_01">
+		<div class="add_bo">
+			  <div class="nowpro">
+
+					<h4>产品分类：</h4>
+					<div class="SubCategoryBox">
+						<ul>
+							<li id="0"><a href="__ROOT__/index.php/indexproduct">全部</a><i></i></li>
+							<volist name="typeList" id="type">
+							<li  id="{$type.id}"><a href="__ROOT__/index.php/indexproduct?typeid={$type.id}">{$type.name}</a><i>({$type.count}) </i></li>
+							</volist>
+						</ul>
+						<div class="showmore" style="display: none">
+							<a href="#"><span>更多分类</span></a>
+						</div>
+					</div>
+			</div>
+			<div style="float: none;"></div>
+			<ul class="add_list">
+				<volist name="items" id="vo">
+				<li>
+				<div style="float: left;"><a href="__ROOT__/index.php/productinfo?id={$vo.id}"><img
+						src="{$vo.imgpath}" width="150" height="200" /></a></div>
+					<div style="float: right;">
+						<span><a href="__ROOT__/index.php/productinfo?id={$vo.id}">{$vo.pname|truncate_cn=25,'',0}</a></span>
+						<span class="money">市场价：&yen;{$vo.price}</span>
+						<span class="money">会员价：&yen;{$vo.price_vip}</span>
+						<span class="money">分销价：&yen;{$vo.price_pifa}</span>
+						<span class="money">PV：{$vo.counts}</span>
+						<span class="money">产品货号：{$vo.prono}</span>
+					</div>
+				</li>
+				</volist>
+			</ul>
+			<!-- 主要内容分页start -->
+			<div class="pagin" id="kkpager"></div>
+			<!-- 主要内容分页end -->
+		</div>
+
+	</div>
+
+	<!-- 主要内容end -->
+	<!-- 内容end -->
+	<input type="hidden" id="pagecount" value="{$pagecount}" />
+	<input type="hidden" id="itemscount" value="{$itemscount}" />
+	<input type="hidden" id="pageno" value="{$pageno}" />
+	<input type="hidden" id="typeid" value="{$typeid}" />
+	<input type="hidden" id="size" value="12" />
+	<!-- 底部start -->
+	<include file="Public:script" />
+	<script type="text/javascript" src="__PUBLIC__/js/kkpager.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/indexproduct.js"></script>
+	<!-- 底部end -->
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+</head>
+<body>
+	<input type="hidden" name="id" value="{$type.id}" />
+	<div class="div_from_aoto" style="width: 320px;">
+		<DIV class="control-group">
+			<label class="laber_from">分类名称</label>
+			<DIV class="controls">
+				<INPUT class="input_from" value="{$type.name}" name="typename" type="text"
+					placeholder="请输入分类名称" />
+				<P class=help-block></P>
+			</DIV>
+		</DIV>
+		<DIV class="control-group">
+			<LABEL class="laber_from">排序</LABEL>
+			<DIV class="controls">
+				<INPUT class="input_from" value="{$type.orders}" name="typeorder" type="text"
+					placeholder="请输入分类排序" />
+				<P class=help-block></P>
+			</DIV>
+		</DIV>
+		<DIV class="control-group error" id="msg"></DIV>
+
+		<DIV class="control-group">
+			<DIV class="controls">
+				<button class="btn btn-success" onclick="addProductType()"
+					style="width: 200px;">确认</button>
+			</DIV>
+		</DIV>
+	</div>
+</body>
+</html>

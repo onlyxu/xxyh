@@ -1,0 +1,2249 @@
+[ 2015-02-04 09:38:24 ] 127.0.0.1 /xxyh/index.php/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001532s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001633s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000882s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.112680s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:38','127.0.0.1','-本地-','Index/index','访问首页/登录',0) [ RunTime:0.000546s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.057658s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057893s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001275s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000730s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000718s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000743s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003737s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000978s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001064s ]
+
+[ 2015-02-04 09:38:31 ] 127.0.0.1 /xxyh/index.php/login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001241s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001373s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+NOTIC: [8] Undefined index:  ccode D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 63 行.
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.064315s ]
+SQL: SELECT * FROM `tp_user` WHERE ( loginname ='zhangfei' ) LIMIT 1   [ RunTime:0.000565s ]
+NOTIC: [8] Undefined variable: char D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 77 行.
+NOTIC: [8] Undefined variable: str D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 88 行.
+SQL: SHOW COLUMNS FROM `tp_loginlog` [ RunTime:0.045902s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 153 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 153 行.
+SQL: INSERT INTO `tp_loginlog` (`logintime`,`loginip`,`loginerrar`,`userid`) VALUES ('2015-02-04 09:38','127.0.0.1','-本地访问-','26') [ RunTime:0.000206s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.004025s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:38','127.0.0.1','-本地-','Index/login','用户登录','26') [ RunTime:0.000205s ]
+
+[ 2015-02-04 09:38:31 ] 127.0.0.1 /xxyh/index.php/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000815s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000912s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.007173s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000691s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.046599s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.030401s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.001083s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.030397s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000408s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.005508s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:38','127.0.0.1','-本地-','Index/index','访问首页','26') [ RunTime:0.000250s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031096s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031267s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000722s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000697s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000902s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000921s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003645s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000884s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000958s ]
+
+[ 2015-02-04 09:38:31 ] 127.0.0.1 /xxyh/index.php/main
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001280s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001430s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.007119s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.005538s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000594s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000436s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004872s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000525s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 30 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.004042s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:38','127.0.0.1','-本地-','Index/main','访问主页','26') [ RunTime:0.000196s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008453s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008597s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000295s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000308s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000188s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001346s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000604s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2015-02-04 09:38:34 ] 127.0.0.1 /xxyh/index.php/customerform
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000880s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000973s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004877s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004282s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000536s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000450s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004107s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000341s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_customerform` WHERE ( userid=26 ) LIMIT 1   [ RunTime:0.000246s ]
+SQL: select a.id,a.dtime,a.money,a.status,a.sum,c.name as sumname from tp_customerform a left join tp_user c on c.id = a.userid  where 1=1 and a.userid=26 order by a.dtime desc  limit -9,9 [ RunTime:0.000174s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-9,9' at line 1
+ [ SQL语句 ] : select a.id,a.dtime,a.money,a.status,a.sum,c.name as sumname from tp_customerform a left join tp_user c on c.id = a.userid  where 1=1 and a.userid=26 order by a.dtime desc  limit -9,9
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000524s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000557s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000200s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010438s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:38','127.0.0.1','-本地-','Customer/getRecordList','个人报单记录','26') [ RunTime:0.000361s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.051197s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051529s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000756s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000965s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000730s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001453s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004489s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001279s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001450s ]
+
+[ 2015-02-04 09:38:41 ] 127.0.0.1 /xxyh/index.php/indexproduct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000915s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001074s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004812s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004394s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000566s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000423s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004485s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000308s ]
+SQL: SHOW COLUMNS FROM `tp_product` [ RunTime:0.078805s ]
+SQL: SHOW COLUMNS FROM `tp_producttype` [ RunTime:0.052703s ]
+NOTIC: [8] Undefined index:  typeid D:\AppServ\www\xxyh\home\Lib\Action\ProductAction.class.php 第 155 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_product` WHERE ( enabled=1 ) LIMIT 1   [ RunTime:0.000592s ]
+SQL: select a.id,a.name as pname,a.dtime,a.imgpath,a.prono,a.counts,a.price,a.price_vip,a.price_pifa,b.name as typename from tp_product a left join tp_producttype b on a.typeid = b.id where 1=1 and a.enabled=1  order by a.orders desc ,a.dtime desc  limit 0,12 [ RunTime:0.000813s ]
+SQL: SELECT a.id as id, a.name as name ,COUNT(b.id) as count from tp_producttype a LEFT JOIN tp_product b on a.id = b.typeid GROUP BY a.id [ RunTime:0.001995s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000787s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.001039s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000875s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010691s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:38','127.0.0.1','-本地-','Product/getIndexProduct','获取首页展示产品','26') [ RunTime:0.000423s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: typeid D:\AppServ\www\xxyh\home\Runtime\Cache\4165002a7370afe3d971f21598113f8e.php 第 67 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.025751s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025909s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000539s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000472s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000294s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000738s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002308s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000836s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000933s ]
+
+[ 2015-02-04 09:38:45 ] 127.0.0.1 /xxyh/index.php/indexnews
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000843s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000933s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005063s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004631s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000517s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000382s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004016s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000251s ]
+SQL: SHOW COLUMNS FROM `tp_news` [ RunTime:0.021971s ]
+SQL: SHOW COLUMNS FROM `tp_newstype` [ RunTime:0.018489s ]
+NOTIC: [8] Undefined index:  typeid D:\AppServ\www\xxyh\home\Lib\Action\NewsAction.class.php 第 10 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_news` WHERE ( enabled =1  ) LIMIT 1   [ RunTime:0.000305s ]
+SQL: select a.id,a.title,a.dtime,a.counts,a.orders,b.name as typename,c.name as writer from tp_news a left join tp_newstype b on a.typeid = b.id left join tp_user c on a.userid = c.id where 1=1 and a.enabled=1  order by a.orders desc ,a.dtime desc  limit 0,9 [ RunTime:0.000371s ]
+SQL: SELECT a.id as id, a.name as name ,COUNT(b.id) as count from tp_newstype a LEFT JOIN tp_news b on a.id = b.typeid GROUP BY a.id [ RunTime:0.000373s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000253s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000421s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000371s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000172s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.011047s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:38','127.0.0.1','-本地-','News/getIndexNews','获取前台展示新闻','26') [ RunTime:0.000444s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018086s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018280s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000456s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000450s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000306s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000526s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002010s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000798s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000901s ]
+
+[ 2015-02-04 09:38:47 ] 127.0.0.1 /xxyh/index.php/newsinfo?id=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001272s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001378s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005686s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004017s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000462s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.003962s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000233s ]
+SQL: SHOW COLUMNS FROM `tp_news` [ RunTime:0.004367s ]
+SQL: SELECT * FROM `tp_news` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000297s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000473s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000425s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000225s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.011246s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:38','127.0.0.1','-本地-','News/getNewsInfo','获取新闻详情信息','26') [ RunTime:0.000539s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: pagecount D:\AppServ\www\xxyh\home\Runtime\Cache\217e2fa799c9b519b821bd9ea476ef91.php 第 29 行.
+NOTIC: [8] Undefined variable: itemscount D:\AppServ\www\xxyh\home\Runtime\Cache\217e2fa799c9b519b821bd9ea476ef91.php 第 30 行.
+NOTIC: [8] Undefined variable: pageno D:\AppServ\www\xxyh\home\Runtime\Cache\217e2fa799c9b519b821bd9ea476ef91.php 第 31 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.050467s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050679s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000792s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000753s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000464s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000900s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003333s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001268s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001430s ]
+
+[ 2015-02-04 09:38:49 ] 127.0.0.1 /xxyh/index.php/indexnews
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000769s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000852s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004522s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004033s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000519s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000458s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004262s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000277s ]
+SQL: SHOW COLUMNS FROM `tp_news` [ RunTime:0.004249s ]
+SQL: SHOW COLUMNS FROM `tp_newstype` [ RunTime:0.003930s ]
+NOTIC: [8] Undefined index:  typeid D:\AppServ\www\xxyh\home\Lib\Action\NewsAction.class.php 第 10 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_news` WHERE ( enabled =1  ) LIMIT 1   [ RunTime:0.000418s ]
+SQL: select a.id,a.title,a.dtime,a.counts,a.orders,b.name as typename,c.name as writer from tp_news a left join tp_newstype b on a.typeid = b.id left join tp_user c on a.userid = c.id where 1=1 and a.enabled=1  order by a.orders desc ,a.dtime desc  limit 0,9 [ RunTime:0.000307s ]
+SQL: SELECT a.id as id, a.name as name ,COUNT(b.id) as count from tp_newstype a LEFT JOIN tp_news b on a.id = b.typeid GROUP BY a.id [ RunTime:0.000368s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000266s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000514s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000430s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000172s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010560s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:38','127.0.0.1','-本地-','News/getIndexNews','获取前台展示新闻','26') [ RunTime:0.000713s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021544s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021699s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000399s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000438s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000273s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000468s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001809s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000649s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000726s ]
+
+[ 2015-02-04 09:38:50 ] 127.0.0.1 /xxyh/index.php/indexproduct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001435s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001634s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005980s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000386s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.005850s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000649s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000530s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004261s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000269s ]
+SQL: SHOW COLUMNS FROM `tp_product` [ RunTime:0.004465s ]
+SQL: SHOW COLUMNS FROM `tp_producttype` [ RunTime:0.003923s ]
+NOTIC: [8] Undefined index:  typeid D:\AppServ\www\xxyh\home\Lib\Action\ProductAction.class.php 第 155 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_product` WHERE ( enabled=1 ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: select a.id,a.name as pname,a.dtime,a.imgpath,a.prono,a.counts,a.price,a.price_vip,a.price_pifa,b.name as typename from tp_product a left join tp_producttype b on a.typeid = b.id where 1=1 and a.enabled=1  order by a.orders desc ,a.dtime desc  limit 0,12 [ RunTime:0.000350s ]
+SQL: SELECT a.id as id, a.name as name ,COUNT(b.id) as count from tp_producttype a LEFT JOIN tp_product b on a.id = b.typeid GROUP BY a.id [ RunTime:0.000388s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000232s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000397s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000352s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.011171s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:38','127.0.0.1','-本地-','Product/getIndexProduct','获取首页展示产品','26') [ RunTime:0.000411s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: typeid D:\AppServ\www\xxyh\home\Runtime\Cache\4165002a7370afe3d971f21598113f8e.php 第 67 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.022996s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023126s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000392s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000309s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000230s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001526s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000594s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000654s ]
+
+[ 2015-02-04 09:38:51 ] 127.0.0.1 /xxyh/index.php/companyinfo
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001809s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001933s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004649s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000285s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.003974s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000586s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000687s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004576s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `tp_company` [ RunTime:0.038465s ]
+SQL: SELECT * FROM `tp_company` LIMIT 1   [ RunTime:0.011799s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000600s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.001347s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.001483s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.008651s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:38','127.0.0.1','-本地-','User/getCompanyInfo','获取公司信息','26') [ RunTime:0.000478s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010974s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011115s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000473s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000366s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000198s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000403s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001691s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000596s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000679s ]
+
+[ 2015-02-04 09:38:58 ] 127.0.0.1 /xxyh/index.php/exit
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000833s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000925s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004918s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=26 ) LIMIT 1   [ RunTime:0.000308s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004294s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000510s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=26 order by a.pid asc, a.orders asc  [ RunTime:0.000435s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004147s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=26 [ RunTime:0.000264s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.004917s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:38','127.0.0.1','-本地-','Index/goLogin','访问登录页面','26') [ RunTime:0.000271s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007577s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007735s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000294s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000350s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000207s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000360s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001504s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000517s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000576s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:38','127.0.0.1','-本地-','Index/goexit','退出登录','26') [ RunTime:0.000491s ]
+
+[ 2015-02-04 09:39:11 ] 127.0.0.1 /xxyh/index.php/login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001123s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001310s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+NOTIC: [8] Undefined index:  ccode D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 63 行.
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.006267s ]
+SQL: SELECT * FROM `tp_user` WHERE ( loginname ='admin' ) LIMIT 1   [ RunTime:0.000397s ]
+NOTIC: [8] Undefined variable: char D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 77 行.
+NOTIC: [8] Undefined variable: str D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 88 行.
+SQL: SHOW COLUMNS FROM `tp_loginlog` [ RunTime:0.010447s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 153 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 153 行.
+SQL: INSERT INTO `tp_loginlog` (`logintime`,`loginip`,`loginerrar`,`userid`) VALUES ('2015-02-04 09:39','127.0.0.1','-本地访问-','1') [ RunTime:0.000535s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010503s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:39','127.0.0.1','-本地-','Index/login','用户登录','1') [ RunTime:0.000527s ]
+
+[ 2015-02-04 09:39:12 ] 127.0.0.1 /xxyh/index.php/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000987s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001129s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.006868s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.005416s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000969s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.005856s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000410s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.007884s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:39','127.0.0.1','-本地-','Index/index','访问首页','1') [ RunTime:0.000389s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.020329s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020484s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000405s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000294s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000230s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000366s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001479s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000778s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000898s ]
+
+[ 2015-02-04 09:39:12 ] 127.0.0.1 /xxyh/index.php/main
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001338s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001508s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.007564s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000393s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.006446s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000668s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.005791s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000285s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 30 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.004663s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:39','127.0.0.1','-本地-','Index/main','访问主页','1') [ RunTime:0.000210s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019772s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020076s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000761s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000883s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000627s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000909s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003652s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001286s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001452s ]
+
+[ 2015-02-04 09:39:19 ] 127.0.0.1 /xxyh/index.php/companymanager
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002843s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003010s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004834s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004949s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000574s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004537s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000419s ]
+SQL: SHOW COLUMNS FROM `tp_company` [ RunTime:0.004399s ]
+SQL: SELECT * FROM `tp_company` LIMIT 1   [ RunTime:0.000432s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000279s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000489s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000462s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000193s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010397s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:39','127.0.0.1','-本地-','User/getCompanyManager','管理公司信息','1') [ RunTime:0.000468s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: pagecount D:\AppServ\www\xxyh\home\Runtime\Cache\a6595085f9d22ab852c71b25f0cdb725.php 第 36 行.
+NOTIC: [8] Undefined variable: itemscount D:\AppServ\www\xxyh\home\Runtime\Cache\a6595085f9d22ab852c71b25f0cdb725.php 第 37 行.
+NOTIC: [8] Undefined variable: pageno D:\AppServ\www\xxyh\home\Runtime\Cache\a6595085f9d22ab852c71b25f0cdb725.php 第 38 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.050841s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051163s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000734s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000569s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000361s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000704s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002684s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001551s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001704s ]
+
+[ 2015-02-04 09:39:23 ] 127.0.0.1 /xxyh/index.php/goaddcompany?id=2
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001727s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001845s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000704s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004435s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000380s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004398s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000510s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000453s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004072s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000267s ]
+SQL: SHOW COLUMNS FROM `tp_company` [ RunTime:0.004713s ]
+SQL: SELECT * FROM `tp_company` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.000350s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000329s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000543s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000461s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000182s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.007569s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:39','127.0.0.1','-本地-','User/goAddCompanyInfo','增加公司信息页面','1') [ RunTime:0.000395s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: pagecount D:\AppServ\www\xxyh\home\Runtime\Cache\9f169b9938295690e88a6facbba8271b.php 第 49 行.
+NOTIC: [8] Undefined variable: itemscount D:\AppServ\www\xxyh\home\Runtime\Cache\9f169b9938295690e88a6facbba8271b.php 第 50 行.
+NOTIC: [8] Undefined variable: pageno D:\AppServ\www\xxyh\home\Runtime\Cache\9f169b9938295690e88a6facbba8271b.php 第 51 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.053711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053874s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001382s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000743s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000466s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000917s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003933s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001547s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001849s ]
+
+[ 2015-02-04 09:41:37 ] 127.0.0.1 /xxyh/index.php/usermanager
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001738s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001862s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004732s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000695s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004438s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000585s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000470s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004369s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000269s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` LIMIT 1   [ RunTime:0.000188s ]
+SQL: select a.id,a.name,a.loginname,a.dtime,a.enabled,a.orders,a.xiaofei,a.ticheng,a.yeji,b.name as rolename,b.id as roleid from tp_user a left join tp_role b on b.id = a.roleid  where 1=1   [ RunTime:0.054939s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000717s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001977s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001176s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010871s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:41','127.0.0.1','-本地-','User/userManager','用户信息管理','1') [ RunTime:0.000643s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.022686s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022849s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000779s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000934s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000665s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003914s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001157s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001240s ]
+
+[ 2015-02-04 09:41:38 ] 127.0.0.1 /xxyh/index.php/menutree
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001414s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001560s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000685s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.006074s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000459s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004961s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000521s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.005072s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000861s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000469s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000658s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000925s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000467s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.005629s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:41','127.0.0.1','-本地-','User/getMenuTree','导航菜单树','1') [ RunTime:0.000210s ]
+SQL: SELECT * FROM `tp_menu`  [ RunTime:0.000368s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.040506s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040776s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000410s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000297s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000191s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000360s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001433s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000489s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000548s ]
+
+[ 2015-02-04 09:41:47 ] 127.0.0.1 /xxyh/index.php/usermenu?userid=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001057s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001148s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005977s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.006305s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000755s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000907s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.005186s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000397s ]
+SQL: SHOW COLUMNS FROM `tp_usermenu` [ RunTime:0.007651s ]
+SQL: select a.id,a.userid,a.menuid from tp_usermenu a where 1=1 and a.userid=1 [ RunTime:0.000388s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000348s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000690s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000748s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000255s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010875s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:41','127.0.0.1','-本地-','User/getUserMenu','获取用户导航权限','1') [ RunTime:0.000521s ]
+
+[ 2015-02-04 09:41:47 ] 127.0.0.1 /xxyh/index.php/goadduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002328s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002509s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000847s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000952s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.006850s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.006020s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000586s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000499s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004036s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000274s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.003929s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.000227s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000297s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000529s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000491s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000242s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010928s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:41','127.0.0.1','-本地-','User/goAddUser','添加用户页面','1') [ RunTime:0.000525s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000627s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  balance D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 34 行.
+NOTIC: [8] Undefined index:  receiveraddr D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 42 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.039735s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039861s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000573s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000554s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000491s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000609s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002378s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000728s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000780s ]
+
+[ 2015-02-04 09:42:06 ] 127.0.0.1 /xxyh/index.php/checkname?name=%E7%AE%A1%E7%90%86%E5%91%98
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001795s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001923s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004675s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000309s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004404s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000559s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000428s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004074s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000225s ]
+SQL: SELECT * FROM `tp_user` WHERE ( name='管理员' )  [ RunTime:0.000226s ]
+NOTIC: [8] Use of undefined constant count - assumed 'count' D:\AppServ\www\xxyh\home\Lib\Action\UserAction.class.php 第 1520 行.
+
+[ 2015-02-04 09:42:52 ] 127.0.0.1 /xxyh/index.php/checkloginname?loginname=admin
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001220s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001320s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005579s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000422s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004336s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000543s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000476s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004333s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000281s ]
+SQL: SELECT * FROM `tp_user` WHERE ( loginname='admin' )  [ RunTime:0.000300s ]
+NOTIC: [8] Use of undefined constant count - assumed 'count' D:\AppServ\www\xxyh\home\Lib\Action\UserAction.class.php 第 1496 行.
+
+[ 2015-02-04 09:45:40 ] 127.0.0.1 /xxyh/index.php/usermanager
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001419s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001607s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004278s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004078s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000536s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000428s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.003830s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000247s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` LIMIT 1   [ RunTime:0.000164s ]
+SQL: select a.id,a.name,a.loginname,a.dtime,a.enabled,a.orders,a.xiaofei,a.ticheng,a.yeji,b.name as rolename,b.id as roleid from tp_user a left join tp_role b on b.id = a.roleid  where 1=1   [ RunTime:0.000241s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000232s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000446s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000423s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000189s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010641s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:45','127.0.0.1','-本地-','User/userManager','用户信息管理','1') [ RunTime:0.000524s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.027186s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027338s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000775s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000626s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000676s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001213s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003529s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001230s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001342s ]
+
+[ 2015-02-04 09:45:40 ] 127.0.0.1 /xxyh/index.php/usermanager
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001499s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001599s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000745s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004366s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004426s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000538s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000478s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004326s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000283s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` LIMIT 1   [ RunTime:0.000201s ]
+SQL: select a.id,a.name,a.loginname,a.dtime,a.enabled,a.orders,a.xiaofei,a.ticheng,a.yeji,b.name as rolename,b.id as roleid from tp_user a left join tp_role b on b.id = a.roleid  where 1=1   [ RunTime:0.000261s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000246s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000467s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000455s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000174s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.011267s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:45','127.0.0.1','-本地-','User/userManager','用户信息管理','1') [ RunTime:0.000430s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.027993s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028175s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001032s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000987s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000891s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004307s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001338s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001459s ]
+
+[ 2015-02-04 09:45:42 ] 127.0.0.1 /xxyh/index.php/goadduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001562s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001706s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004827s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000443s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.008402s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000556s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004158s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000285s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.004687s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.000428s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000673s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001055s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000796s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000226s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.005890s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:45','127.0.0.1','-本地-','User/goAddUser','添加用户页面','1') [ RunTime:0.000241s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000322s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  balance D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 34 行.
+NOTIC: [8] Undefined index:  receiveraddr D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 42 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012653s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000550s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000501s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000324s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000823s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002496s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000530s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000588s ]
+
+[ 2015-02-04 09:45:43 ] 127.0.0.1 /xxyh/index.php/checkloginname?loginname=admin
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001708s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001826s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.006624s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004000s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000563s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000704s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004673s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000380s ]
+NOTIC: [8] Undefined index:  id D:\AppServ\www\xxyh\home\Lib\Action\UserAction.class.php 第 1493 行.
+SQL: SELECT * FROM `tp_user` WHERE ( loginname='admin' )  [ RunTime:0.000713s ]
+NOTIC: [8] Use of undefined constant count - assumed 'count' D:\AppServ\www\xxyh\home\Lib\Action\UserAction.class.php 第 1502 行.
+
+[ 2015-02-04 09:45:48 ] 127.0.0.1 /xxyh/index.php/usermanager
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001074s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001192s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000616s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005313s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004908s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000816s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000599s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004076s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000254s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` LIMIT 1   [ RunTime:0.000180s ]
+SQL: select a.id,a.name,a.loginname,a.dtime,a.enabled,a.orders,a.xiaofei,a.ticheng,a.yeji,b.name as rolename,b.id as roleid from tp_user a left join tp_role b on b.id = a.roleid  where 1=1   [ RunTime:0.000244s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000235s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000525s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000437s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000175s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010551s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:45','127.0.0.1','-本地-','User/userManager','用户信息管理','1') [ RunTime:0.000420s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.028955s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029239s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000938s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000782s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000458s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002958s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000550s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000615s ]
+
+[ 2015-02-04 09:45:49 ] 127.0.0.1 /xxyh/index.php/goadduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002694s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002898s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.006534s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000587s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.005305s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000509s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000431s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004177s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000397s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.006086s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.000342s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000435s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000500s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000458s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000219s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.007310s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:45','127.0.0.1','-本地-','User/goAddUser','添加用户页面','1') [ RunTime:0.000216s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000240s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  balance D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 34 行.
+NOTIC: [8] Undefined index:  receiveraddr D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 42 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014148s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000288s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000275s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000188s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000350s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001254s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000662s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000737s ]
+
+[ 2015-02-04 09:45:51 ] 127.0.0.1 /xxyh/index.php/checkloginname?loginname=admin&id=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001361s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001477s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005744s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000764s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004090s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000542s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000420s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004185s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000472s ]
+SQL: SELECT * FROM `tp_user` WHERE ( loginname='admin' and id <> 1 )  [ RunTime:0.000384s ]
+NOTIC: [8] Use of undefined constant count - assumed 'count' D:\AppServ\www\xxyh\home\Lib\Action\UserAction.class.php 第 1502 行.
+
+[ 2015-02-04 09:45:53 ] 127.0.0.1 /xxyh/index.php/checkloginname?loginname=admin&id=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001423s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001560s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005761s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.005825s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000771s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000527s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.007005s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000300s ]
+SQL: SELECT * FROM `tp_user` WHERE ( loginname='admin' and id <> 1 )  [ RunTime:0.000289s ]
+NOTIC: [8] Use of undefined constant count - assumed 'count' D:\AppServ\www\xxyh\home\Lib\Action\UserAction.class.php 第 1502 行.
+
+[ 2015-02-04 09:46:17 ] 127.0.0.1 /xxyh/index.php/adduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001638s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001740s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004282s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.003987s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000578s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004084s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `tp_userrole` [ RunTime:0.003798s ]
+ERR: 1146:Table 'myapp.tp_userrole' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_userrole`
+NOTIC: [8] Undefined index:  xiaofei D:\AppServ\www\xxyh\home\Lib\Action\UserAction.class.php 第 773 行.
+SQL: SELECT * FROM `tp_user` WHERE ( name='admin' ) LIMIT 1   [ RunTime:0.000341s ]
+NOTIC: [8] Undefined variable: char D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: str D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 54 行.
+SQL: UPDATE `tp_user` SET `sex`='',`loginname`='admin',`name`='管理员',`email`='277156235@qq.com',`benci`=160,`xiaofei`=160,`bankcard`='1123123208082012',`refuser`='admin',`receiveaddr`='adaaaadasd',`cardid`='411123123208082012',`loginkey`='9s8f28',`loginpass`='kpWRYGKT',`dtime`='2015-02-04 09:46',`roleid`='1' WHERE ( id=1 ) [ RunTime:0.000298s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000369s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000520s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000459s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000190s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010047s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:46','127.0.0.1','-本地-','User/addUserInfo','添加用户信息','1') [ RunTime:0.000471s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` LIMIT 1   [ RunTime:0.000484s ]
+SQL: select a.id,a.name,a.loginname,a.dtime,a.enabled,a.orders,a.xiaofei,a.ticheng,a.yeji,b.name as rolename,b.id as roleid from tp_user a left join tp_role b on b.id = a.roleid  where 1=1   [ RunTime:0.000496s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000344s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000667s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000643s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000256s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:46','127.0.0.1','-本地-','User/userManager','用户信息管理','1') [ RunTime:0.000417s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.034215s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034397s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001557s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001052s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001126s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005250s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001311s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001409s ]
+
+[ 2015-02-04 09:46:19 ] 127.0.0.1 /xxyh/index.php/goadduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002002s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002198s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000895s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004319s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.005913s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000878s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000669s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004376s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000291s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.005701s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.000393s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000416s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000592s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000967s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.006386s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:46','127.0.0.1','-本地-','User/goAddUser','添加用户页面','1') [ RunTime:0.000517s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000335s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  balance D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 34 行.
+NOTIC: [8] Undefined index:  receiveraddr D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 42 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011378s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011484s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000279s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000269s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000345s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000448s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001508s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000520s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000573s ]
+
+[ 2015-02-04 09:46:28 ] 127.0.0.1 /xxyh/index.php/goadduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000960s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001063s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004195s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000309s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004053s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000503s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000406s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.003795s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000239s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.004169s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.000229s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000468s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000468s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000168s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010102s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:46','127.0.0.1','-本地-','User/goAddUser','添加用户页面','1') [ RunTime:0.000442s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000543s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  balance D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 34 行.
+NOTIC: [8] Undefined index:  receiveraddr D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 42 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021384s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021542s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000605s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000616s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000401s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000751s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002692s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001098s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001213s ]
+
+[ 2015-02-04 09:49:20 ] 127.0.0.1 /xxyh/index.php/adduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001833s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001959s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001395s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004547s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.003765s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000554s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000454s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.003969s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000271s ]
+SQL: SHOW COLUMNS FROM `tp_userrole` [ RunTime:0.003600s ]
+ERR: 1146:Table 'myapp.tp_userrole' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_userrole`
+NOTIC: [8] Undefined index:  xiaofei D:\AppServ\www\xxyh\home\Lib\Action\UserAction.class.php 第 773 行.
+SQL: SELECT * FROM `tp_user` WHERE ( name='admin' or loginname ='admin'  ) LIMIT 1   [ RunTime:0.000334s ]
+NOTIC: [8] Undefined variable: char D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: str D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 54 行.
+SQL: UPDATE `tp_user` SET `sex`='',`loginname`='admin',`name`='管理员',`email`='277156235@qq.com',`benci`=160,`xiaofei`=160,`bankcard`='6612-1232-1122-1123',`refuser`='admin',`receiveaddr`='河南省洛阳市',`cardid`='411123123208082012',`pid`='1',`loginkey`='hauxg2',`loginpass`='aZNllGRh',`dtime`='2015-02-04 09:49',`roleid`='1' WHERE ( id=1 ) [ RunTime:0.000291s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000432s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000513s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000445s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000195s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.009969s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:49','127.0.0.1','-本地-','User/addUserInfo','添加用户信息','1') [ RunTime:0.000432s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` LIMIT 1   [ RunTime:0.000389s ]
+SQL: select a.id,a.name,a.loginname,a.dtime,a.enabled,a.orders,a.xiaofei,a.ticheng,a.yeji,b.name as rolename,b.id as roleid from tp_user a left join tp_role b on b.id = a.roleid  where 1=1   [ RunTime:0.000563s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000454s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001007s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000999s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000354s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:49','127.0.0.1','-本地-','User/userManager','用户信息管理','1') [ RunTime:0.000445s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.028941s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029117s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000922s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000890s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000859s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001391s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004338s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001184s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001278s ]
+
+[ 2015-02-04 09:49:33 ] 127.0.0.1 /xxyh/index.php/goadduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001314s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001423s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000831s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000925s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005635s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.001120s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.005858s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000563s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000430s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004005s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.006035s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.000383s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000447s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000522s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000424s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000180s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.009534s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:49','127.0.0.1','-本地-','User/goAddUser','添加用户页面','1') [ RunTime:0.000542s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000690s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  balance D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 34 行.
+NOTIC: [8] Undefined index:  receiveraddr D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 42 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.028258s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028385s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000619s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000565s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000501s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000618s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002451s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000743s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000795s ]
+
+[ 2015-02-04 09:50:03 ] 127.0.0.1 /xxyh/index.php/adduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001699s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002301s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005431s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004137s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000612s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000526s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004802s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000308s ]
+SQL: SHOW COLUMNS FROM `tp_userrole` [ RunTime:0.003780s ]
+ERR: 1146:Table 'myapp.tp_userrole' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_userrole`
+NOTIC: [8] Undefined index:  xiaofei D:\AppServ\www\xxyh\home\Lib\Action\UserAction.class.php 第 773 行.
+SQL: SELECT * FROM `tp_user` WHERE ( name='admin' or loginname ='admin'  ) LIMIT 1   [ RunTime:0.000326s ]
+NOTIC: [8] Undefined variable: char D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: str D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 54 行.
+SQL: UPDATE `tp_user` SET `sex`='',`loginname`='admin',`name`='管理员',`email`='277156235@qq.com',`benci`=160,`xiaofei`=160,`bankcard`='6612-1232-1122-1123',`refuser`='admin',`receiveaddr`='河南省洛阳市',`cardid`='411123123208082012',`pid`='1',`loginkey`='mul1fd',`loginpass`='YZVmZ2Bk',`dtime`='2015-02-04 09:50',`roleid`='1' WHERE ( id=1 ) [ RunTime:0.000250s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000324s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000500s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000543s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000225s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010148s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:50','127.0.0.1','-本地-','User/addUserInfo','添加用户信息','1') [ RunTime:0.000429s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` LIMIT 1   [ RunTime:0.000978s ]
+SQL: select a.id,a.name,a.loginname,a.dtime,a.enabled,a.orders,a.xiaofei,a.ticheng,a.yeji,b.name as rolename,b.id as roleid from tp_user a left join tp_role b on b.id = a.roleid  where 1=1   [ RunTime:0.000835s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000512s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001254s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001038s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000367s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:50','127.0.0.1','-本地-','User/userManager','用户信息管理','1') [ RunTime:0.000564s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.025894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026068s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000492s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000538s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000305s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000565s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002168s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000722s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000811s ]
+
+[ 2015-02-04 09:50:05 ] 127.0.0.1 /xxyh/index.php/goadduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001276s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001413s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005930s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004158s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000595s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000442s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004498s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000335s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.006210s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.000287s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000277s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000497s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000434s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000248s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.004508s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:50','127.0.0.1','-本地-','User/goAddUser','添加用户页面','1') [ RunTime:0.000204s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000231s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  balance D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 34 行.
+NOTIC: [8] Undefined index:  receiveraddr D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 42 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013022s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013102s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000308s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000295s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000188s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000355s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001295s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000494s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000548s ]
+
+[ 2015-02-04 09:50:56 ] 127.0.0.1 /xxyh/index.php/adduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001679s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001803s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001336s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004143s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004461s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000538s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000426s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.003825s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000236s ]
+SQL: SHOW COLUMNS FROM `tp_userrole` [ RunTime:0.004052s ]
+ERR: 1146:Table 'myapp.tp_userrole' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_userrole`
+NOTIC: [8] Undefined index:  xiaofei D:\AppServ\www\xxyh\home\Lib\Action\UserAction.class.php 第 773 行.
+SQL: SELECT * FROM `tp_user` WHERE ( name='admin' or loginname ='admin'  ) LIMIT 1   [ RunTime:0.000315s ]
+NOTIC: [8] Undefined variable: char D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: str D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 54 行.
+SQL: UPDATE `tp_user` SET `sex`='',`loginname`='admin',`name`='管理员',`email`='277156235@qq.com',`benci`=160,`xiaofei`=160,`bankcard`='6612-1232-1122-1123',`refuser`='admin',`receiveaddr`='河南省洛阳市',`cardid`='411123123208082012',`pid`='1',`loginkey`='d230z8',`loginpass`='k2RnYpGS',`dtime`='2015-02-04 09:50',`roleid`='1' WHERE ( id=1 ) [ RunTime:0.000248s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000686s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001337s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001081s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000387s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010396s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:50','127.0.0.1','-本地-','User/addUserInfo','添加用户信息','1') [ RunTime:0.000557s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` LIMIT 1   [ RunTime:0.000435s ]
+SQL: select a.id,a.name,a.loginname,a.dtime,a.enabled,a.orders,a.xiaofei,a.ticheng,a.yeji,b.name as rolename,b.id as roleid from tp_user a left join tp_role b on b.id = a.roleid  where 1=1   [ RunTime:0.000562s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000445s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001561s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001684s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000418s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:50','127.0.0.1','-本地-','User/userManager','用户信息管理','1') [ RunTime:0.000838s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.028075s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028253s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000825s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000727s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000586s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000785s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003157s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000939s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001015s ]
+
+[ 2015-02-04 09:50:57 ] 127.0.0.1 /xxyh/index.php/goadduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002359s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002568s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001237s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.006595s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.006244s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000544s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000433s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004462s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000289s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.005783s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.000271s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000645s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000507s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000412s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000163s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.004794s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:50','127.0.0.1','-本地-','User/goAddUser','添加用户页面','1') [ RunTime:0.000208s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000310s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  balance D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 34 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.020782s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020897s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000923s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000673s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000729s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000812s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003434s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001141s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001238s ]
+
+[ 2015-02-04 09:51:08 ] 127.0.0.1 /xxyh/index.php/goadduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001286s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001380s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000817s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004407s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000396s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.005661s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000671s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000966s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004505s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.005679s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.000330s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000716s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001018s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000731s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.005649s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:51','127.0.0.1','-本地-','User/goAddUser','添加用户页面','1') [ RunTime:0.000267s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000601s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  balance D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 34 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012495s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012609s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000878s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000985s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000708s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000853s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003716s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000838s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000895s ]
+
+[ 2015-02-04 09:51:16 ] 127.0.0.1 /xxyh/index.php/goadduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001142s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001251s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004619s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.001316s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.006094s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000532s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000443s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004630s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.004452s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.000362s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000417s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000811s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000843s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000381s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010161s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:51','127.0.0.1','-本地-','User/goAddUser','添加用户页面','1') [ RunTime:0.000509s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000606s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  balance D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 34 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026081s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026269s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000723s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000845s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000474s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000941s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003367s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001405s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001568s ]
+
+[ 2015-02-04 09:51:51 ] 127.0.0.1 /xxyh/index.php/adduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001615s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001743s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005542s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004201s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000515s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000425s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.003724s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000235s ]
+SQL: SHOW COLUMNS FROM `tp_userrole` [ RunTime:0.003852s ]
+ERR: 1146:Table 'myapp.tp_userrole' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_userrole`
+NOTIC: [8] Undefined index:  xiaofei D:\AppServ\www\xxyh\home\Lib\Action\UserAction.class.php 第 773 行.
+SQL: SELECT * FROM `tp_user` WHERE ( name='admin' or loginname ='admin'  ) LIMIT 1   [ RunTime:0.000349s ]
+NOTIC: [8] Undefined variable: char D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: str D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 54 行.
+SQL: UPDATE `tp_user` SET `sex`='',`loginname`='admin',`name`='管理员',`email`='277156235@qq.com',`benci`=160,`xiaofei`=160,`bankcard`='6612-1232-1122-1123',`refuser`='admin',`receiveaddr`='河南省洛阳市',`cardid`='411123123208082012',`pid`='1',`loginkey`='v3laq7',`loginpass`='lmmWZJGW',`dtime`='2015-02-04 09:51',`roleid`='1' WHERE ( id=1 ) [ RunTime:0.000460s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000508s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000469s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000191s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010072s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:51','127.0.0.1','-本地-','User/addUserInfo','添加用户信息','1') [ RunTime:0.000435s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` LIMIT 1   [ RunTime:0.000376s ]
+SQL: select a.id,a.name,a.loginname,a.dtime,a.enabled,a.orders,a.xiaofei,a.ticheng,a.yeji,b.name as rolename,b.id as roleid from tp_user a left join tp_role b on b.id = a.roleid  where 1=1   [ RunTime:0.000563s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000447s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000985s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001110s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000416s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:51','127.0.0.1','-本地-','User/userManager','用户信息管理','1') [ RunTime:0.000832s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.027544s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027777s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000686s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000700s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000621s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000792s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003176s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001056s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001186s ]
+
+[ 2015-02-04 09:51:51 ] 127.0.0.1 /xxyh/index.php/goadduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001033s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001138s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.006711s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000637s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.007665s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000563s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000475s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.003845s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000263s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.005363s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.000728s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000570s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001120s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001224s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000517s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.007177s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:51','127.0.0.1','-本地-','User/goAddUser','添加用户页面','1') [ RunTime:0.000230s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000575s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  balance D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 34 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012033s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012200s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000416s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000326s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000195s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001490s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000533s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2015-02-04 09:51:57 ] 127.0.0.1 /xxyh/index.php/adduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001281s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001399s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.006658s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000576s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.006411s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000929s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001192s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.005754s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000493s ]
+SQL: SHOW COLUMNS FROM `tp_userrole` [ RunTime:0.005810s ]
+ERR: 1146:Table 'myapp.tp_userrole' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_userrole`
+NOTIC: [8] Undefined index:  xiaofei D:\AppServ\www\xxyh\home\Lib\Action\UserAction.class.php 第 773 行.
+SQL: SELECT * FROM `tp_user` WHERE ( name='admin' or loginname ='admin'  ) LIMIT 1   [ RunTime:0.000567s ]
+NOTIC: [8] Undefined variable: char D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 49 行.
+NOTIC: [8] Undefined variable: str D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 54 行.
+SQL: UPDATE `tp_user` SET `sex`='男',`loginname`='admin',`name`='管理员',`email`='277156235@qq.com',`benci`=160,`xiaofei`=160,`bankcard`='6612-1232-1122-1123',`refuser`='admin',`receiveaddr`='河南省洛阳市',`cardid`='411123123208082012',`pid`='1',`loginkey`='m1srer',`loginpass`='lJRkYZaU',`dtime`='2015-02-04 09:51',`roleid`='1' WHERE ( id=1 ) [ RunTime:0.000576s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000533s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000852s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001004s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000531s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.006615s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:51','127.0.0.1','-本地-','User/addUserInfo','添加用户信息','1') [ RunTime:0.000179s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_user` LIMIT 1   [ RunTime:0.000305s ]
+SQL: select a.id,a.name,a.loginname,a.dtime,a.enabled,a.orders,a.xiaofei,a.ticheng,a.yeji,b.name as rolename,b.id as roleid from tp_user a left join tp_role b on b.id = a.roleid  where 1=1   [ RunTime:0.000610s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000374s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001139s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001356s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000563s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:51','127.0.0.1','-本地-','User/userManager','用户信息管理','1') [ RunTime:0.000203s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014815s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014921s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000326s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000292s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000189s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001333s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000476s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2015-02-04 09:51:58 ] 127.0.0.1 /xxyh/index.php/goadduser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001070s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001185s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.007178s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000395s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004695s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000550s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000443s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.007787s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.004553s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.000252s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000242s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000454s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000418s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000181s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.004388s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:51','127.0.0.1','-本地-','User/goAddUser','添加用户页面','1') [ RunTime:0.000305s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000449s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  balance D:\AppServ\www\xxyh\home\Runtime\Cache\92b7d0a7c56bee6066d586d6dfc92f1b.php 第 34 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010908s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000291s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000271s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000298s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000466s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001571s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000735s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000834s ]
+
+[ 2015-02-04 09:52:07 ] 127.0.0.1 /xxyh/index.php/goaddmyuser
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001593s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001698s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000849s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000924s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004173s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004678s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000539s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000431s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.003861s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000234s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000248s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000435s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000416s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000175s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.008575s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:52','127.0.0.1','-本地-','User/goAddMyUser','增加我的下级页面','1') [ RunTime:0.000332s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: msg D:\AppServ\www\xxyh\home\Runtime\Cache\3694e850fbb8576222f427e1692535cc.php 第 37 行.
+NOTIC: [8] Undefined variable: pagecount D:\AppServ\www\xxyh\home\Runtime\Cache\3694e850fbb8576222f427e1692535cc.php 第 47 行.
+NOTIC: [8] Undefined variable: itemscount D:\AppServ\www\xxyh\home\Runtime\Cache\3694e850fbb8576222f427e1692535cc.php 第 48 行.
+NOTIC: [8] Undefined variable: pageno D:\AppServ\www\xxyh\home\Runtime\Cache\3694e850fbb8576222f427e1692535cc.php 第 49 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.020333s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020497s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001143s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001434s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000986s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005144s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001677s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001799s ]
+
+[ 2015-02-04 09:53:30 ] 127.0.0.1 /xxyh/index.php/userinfo
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001016s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001131s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005575s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000440s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.005947s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000915s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000716s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.005187s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000308s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000360s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000585s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000539s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000212s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.011670s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:53','127.0.0.1','-本地-','User/getUserInfo','用户信息页面','1') [ RunTime:0.000467s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026087s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026268s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000357s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000368s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000226s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001583s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000629s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000696s ]
+
+[ 2015-02-04 09:53:45 ] 127.0.0.1 /xxyh/index.php/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000786s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000876s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000511s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.006404s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:53','127.0.0.1','-本地-','Index/index','访问首页/登录',0) [ RunTime:0.000590s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011467s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000543s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000512s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000488s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000612s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002441s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000839s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000935s ]
+
+[ 2015-02-04 09:53:52 ] 127.0.0.1 /xxyh/index.php/login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000737s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000831s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+NOTIC: [8] Undefined index:  ccode D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 63 行.
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005950s ]
+SQL: SELECT * FROM `tp_user` WHERE ( loginname ='admin' ) LIMIT 1   [ RunTime:0.000471s ]
+NOTIC: [8] Undefined variable: char D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 77 行.
+NOTIC: [8] Undefined variable: str D:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 88 行.
+SQL: SHOW COLUMNS FROM `tp_loginlog` [ RunTime:0.004796s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 153 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 153 行.
+SQL: INSERT INTO `tp_loginlog` (`logintime`,`loginip`,`loginerrar`,`userid`) VALUES ('2015-02-04 09:53','127.0.0.1','-本地访问-','1') [ RunTime:0.000243s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010958s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:53','127.0.0.1','-本地-','Index/login','用户登录','1') [ RunTime:0.000540s ]
+
+[ 2015-02-04 09:53:52 ] 127.0.0.1 /xxyh/index.php/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001311s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001473s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000891s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004700s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000392s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.007326s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000754s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000718s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.005928s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000639s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.004534s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:53','127.0.0.1','-本地-','Index/index','访问首页','1') [ RunTime:0.000261s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018975s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019194s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000407s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000411s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000347s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000806s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002232s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000589s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000665s ]
+
+[ 2015-02-04 09:53:52 ] 127.0.0.1 /xxyh/index.php/main
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001549s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001713s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.006422s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004948s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000583s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000538s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.005883s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000371s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 30 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.004455s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:53','127.0.0.1','-本地-','Index/main','访问主页','1') [ RunTime:0.000222s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009609s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009828s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000441s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000326s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000204s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000381s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001580s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000497s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2015-02-04 09:53:55 ] 127.0.0.1 /xxyh/index.php/userinfo
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001204s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001328s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004402s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004142s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000602s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000509s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004055s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000310s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000313s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000892s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000638s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000231s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.008541s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:53','127.0.0.1','-本地-','User/getUserInfo','用户信息页面','1') [ RunTime:0.000400s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.020274s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020493s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000583s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000597s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000382s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000656s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002529s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000951s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001085s ]
+
+[ 2015-02-04 09:53:56 ] 127.0.0.1 /xxyh/index.php/userinfoedit
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001374s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001490s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.007386s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000685s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004154s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000507s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000643s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.005946s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000449s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000632s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000856s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000668s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000197s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.005343s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 09:53','127.0.0.1','-本地-','User/getUserInfoEdit','编辑用户信息','1') [ RunTime:0.000195s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011631s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000533s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000409s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000207s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000355s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001702s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000873s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000981s ]
+
+[ 2015-02-04 10:03:51 ] 127.0.0.1 /xxyh/index.php/userinfo
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001112s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001210s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000819s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004705s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000400s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004296s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000682s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000638s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004239s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000322s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000336s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000555s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000471s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000186s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010073s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 10:03','127.0.0.1','-本地-','User/getUserInfo','用户信息页面','1') [ RunTime:0.012030s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024225s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024411s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001069s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000953s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000797s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001046s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004147s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001348s ]
+
+[ 2015-02-04 10:03:53 ] 127.0.0.1 /xxyh/index.php/userinfoedit
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001344s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001457s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000900s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005212s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000605s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.005862s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000574s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000473s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004711s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000283s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000405s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000731s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000812s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.004649s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 10:03','127.0.0.1','-本地-','User/getUserInfoEdit','编辑用户信息','1') [ RunTime:0.000226s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010828s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011024s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000947s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000767s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000492s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000740s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003182s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000927s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001021s ]
+
+[ 2015-02-04 10:04:23 ] 127.0.0.1 /xxyh/index.php/userinfo
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001177s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001279s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004554s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000435s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004333s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000667s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000510s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004268s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000314s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000272s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000486s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000452s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000182s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010653s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 10:04','127.0.0.1','-本地-','User/getUserInfo','用户信息页面','1') [ RunTime:0.000447s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.028984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029156s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000628s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000604s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000494s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000653s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002553s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000818s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000889s ]
+
+[ 2015-02-04 10:04:25 ] 127.0.0.1 /xxyh/index.php/userinfoedit
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001051s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001187s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004916s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000309s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.005534s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000864s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001008s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.005791s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000268s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000357s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000475s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000417s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000175s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.004291s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 10:04','127.0.0.1','-本地-','User/getUserInfoEdit','编辑用户信息','1') [ RunTime:0.000236s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009616s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009777s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000324s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000297s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000188s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000375s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001348s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000676s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000752s ]
+
+[ 2015-02-04 10:04:27 ] 127.0.0.1 /xxyh/index.php/checkloginname?loginname=admin&id=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001712s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001893s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000927s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004606s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.005046s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000698s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000501s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004158s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000272s ]
+SQL: SELECT * FROM `tp_user` WHERE ( loginname='admin' and id <> 1 )  [ RunTime:0.000305s ]
+NOTIC: [8] Use of undefined constant count - assumed 'count' D:\AppServ\www\xxyh\home\Lib\Action\UserAction.class.php 第 1502 行.
+
+[ 2015-02-04 10:04:47 ] 127.0.0.1 /xxyh/index.php/userinfo
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000782s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000875s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.004489s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000410s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004189s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000536s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000509s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004572s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000291s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000473s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000442s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000186s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010639s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 10:04','127.0.0.1','-本地-','User/getUserInfo','用户信息页面','1') [ RunTime:0.000519s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.027347s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027531s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000344s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000341s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000206s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000398s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001476s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000468s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000527s ]
+
+[ 2015-02-04 10:04:48 ] 127.0.0.1 /xxyh/index.php/userinfoedit
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001011s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001097s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005012s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000380s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.006004s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001034s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000697s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.004013s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000339s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000452s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.001100s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000819s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.006183s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 10:04','127.0.0.1','-本地-','User/getUserInfoEdit','编辑用户信息','1') [ RunTime:0.000284s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009589s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009707s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000611s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000387s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000202s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000376s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001762s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000519s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000641s ]
+
+[ 2015-02-04 10:04:51 ] 127.0.0.1 /xxyh/index.php/checkloginname?loginname=admin&id=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002067s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002261s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.005497s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.005110s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000664s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000536s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.006087s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000518s ]
+SQL: SELECT * FROM `tp_user` WHERE ( loginname='admin' and id <> 1 )  [ RunTime:0.000552s ]
+NOTIC: [8] Use of undefined constant count - assumed 'count' D:\AppServ\www\xxyh\home\Lib\Action\UserAction.class.php 第 1502 行.
+
+[ 2015-02-04 10:04:58 ] 127.0.0.1 /xxyh/index.php/userinfoedit
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001613s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001735s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001105s ]
+SQL: SHOW COLUMNS FROM `tp_user` [ RunTime:0.007797s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000953s ]
+SQL: SHOW COLUMNS FROM `tp_menu` [ RunTime:0.004060s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000772s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000656s ]
+SQL: SHOW COLUMNS FROM `tp_customerform` [ RunTime:0.006649s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000652s ]
+SQL: SELECT * FROM `tp_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000409s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000524s ]
+SQL: select a.id,a.name,a.urls,a.cls,a.pid from tp_menu a left join tp_usermenu b on a.id = b.menuid where 1=1 and a.enabled=1 and a.pid !=0 and b.userid=1 order by a.pid asc, a.orders asc  [ RunTime:0.000428s ]
+SQL: select sum(a.sum) as balance from tp_customerform a where 1=1 and a.status =0 and a.userid=1 [ RunTime:0.000194s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.005391s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 10:04','127.0.0.1','-本地-','User/getUserInfoEdit','编辑用户信息','1') [ RunTime:0.000221s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010596s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010710s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000719s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000908s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000623s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001024s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003548s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001261s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001364s ]
+
+[ 2015-02-04 15:50:05 ] 127.0.0.1 /xxyh/index.php/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001131s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001231s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000756s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.010191s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 15:50','127.0.0.1','-本地-','Index/index','访问首页/登录',0) [ RunTime:0.000312s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010378s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010518s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000727s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000729s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001079s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000806s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003560s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000970s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001043s ]
+
+[ 2015-02-04 15:51:26 ] 192.168.0.121 /xxyh/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000868s ]
+SQL: SHOW COLUMNS FROM `tp_operlog` [ RunTime:0.006746s ]
+NOTIC: [8] Undefined index:  country D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+NOTIC: [8] Undefined index:  city D:\AppServ\www\xxyh\home\Lib\Action\IndexAction.class.php 第 187 行.
+SQL: INSERT INTO `tp_operlog` (`dtime`,`operip`,`operarea`,`opermethod`,`opernote`,`userid`) VALUES ('2015-02-04 15:51','192.168.0.121','-本地-','Index/index','访问首页/登录',0) [ RunTime:0.000370s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013773s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013925s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000847s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000560s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000476s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000649s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002706s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000789s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000844s ]
+

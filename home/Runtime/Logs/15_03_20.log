@@ -1,0 +1,28 @@
+[ 2015-03-20 21:28:14 ] 127.0.0.1 /xxyh/index.php/decode
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001775s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001900s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000969s ]
+ERR: 非法操作:decode
+
+[ 2015-03-20 21:28:46 ] 127.0.0.1 /xxyh/index.php/decodeData
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002782s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002970s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001486s ]
+ERR: 非法操作:testDecode
+
+[ 2015-03-20 21:30:30 ] 127.0.0.1 /xxyh/index.php/decodeData
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002506s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002642s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001316s ]
+NOTIC: [8] Undefined variable: char E:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 77 行.
+NOTIC: [8] Undefined variable: str E:\AppServ\www\xxyh\home\Lib\Action\UtilAction.class.php 第 88 行.
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+</head>
+<body>
+
+	<div class="rightinfo">
+		<!-- 主要内容start -->
+		<form action="__ROOT__/index.php/adduserrole" method="post">
+			<input type="hidden" name="userid" value="{$userid}" />
+			<ul class="forminfo">
+				<li><label>用户角色:</label> <select name="roleid" class="dfinput">
+						<volist name="rolelist" id="role">
+						<option value="{$role.id}">{$role.name}</option>
+						</volist>
+				</select> <i></i></li>
+				<li><label>&nbsp;</label><input type="submit"
+					class="btn btn-success" value="确认保存" /></li>
+			</ul>
+		</form>
+		<!-- 内容end -->
+	</div>
+
+	<!-- 内容end -->
+</body>
+</html>

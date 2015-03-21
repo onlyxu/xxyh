@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+</head>
+<body>
+
+	<!-- 主要内容start -->
+	<div class="add_right">
+		<div class="add_bo">
+
+			<div class="add_bo">
+				<div class="add_content">
+					<center>
+						<h2>{$news.title}</h2>
+					</center>
+					<br />
+					<p>{$news.info}</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- 主要内容end -->
+
+	<!-- 内容end -->
+	<input type="hidden" id="pagecount" value="{$pagecount}" />
+	<input type="hidden" id="itemscount" value="{$itemscount}" />
+	<input type="hidden" id="pageno" value="{$pageno}" />
+	<input type="hidden" id="size" value="12" />
+	<!-- 底部start -->
+	<include file="Public:script" />
+	<script type="text/javascript"
+		src="__PUBLIC__/js/index/indexproduct.js"></script>
+	<!-- 底部end -->
+</body>
+</html>

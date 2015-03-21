@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+</head>
+<body>
+
+	<!-- 主要内容start -->
+    
+
+	<div class="add_right">
+		<div class="add_bo">
+
+			<div class="add_bo">
+			  <div class="add_content">
+					<center>
+						<h2>{$product.name}</h2>
+					</center>
+
+				<p><table width="80%" border="0">
+  <tr>
+    <td align="center"><img src="{$product.imgpath}"
+						style="max-width:500px; min-height: 300px;" alt="" /></td>
+    <td valign="top"><br/><span class="money">市场价：&yen;{$product.price}</span><br/>
+						<span class="money">会员价：&yen;{$product.price_vip}</span><br/>
+						<span class="money">分销价：&yen;{$product.price_pifa}</span><br/>
+						</td>
+  </tr>
+  <tr>
+    <td colspan="2">{$product.info}</td>
+    </tr>
+</table></p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- 主要内容end -->
+
+	<!-- 内容end -->
+	<input type="hidden" id="pagecount" value="{$pagecount}" />
+	<input type="hidden" id="itemscount" value="{$itemscount}" />
+	<input type="hidden" id="pageno" value="{$pageno}" />
+	<input type="hidden" id="size" value="12" />
+	<!-- 底部start -->
+	<include file="Public:script" />
+	<script type="text/javascript"
+		src="__PUBLIC__/js/index/indexproduct.js"></script>
+	<!-- 底部end -->
+</body>
+</html>

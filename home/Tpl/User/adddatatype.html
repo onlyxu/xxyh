@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+</head>
+<body>
+
+	<div class="rightinfo">
+		<!-- 主要内容start -->
+		<form action="__ROOT__/index.php/adddatatype" id="form1" method="post">
+			<input type="hidden" name="refuserid"
+				value="{$_SESSION['user']['id']}" />
+			<ul class="forminfo">
+				<li><label>字典名称:</label><input name="name" onblur="checkLoginName()" required="required" type="text"
+					class="dfinput" value="" /><i></i></li>
+				<li><label>关键字:</label><input name="keyword" required="required" type="text"
+					class="dfinput" value="" /><i></i></li>
+				<li><label>序号:</label><input name="orders"  required="required" type="text"
+					class="dfinput" value="{$orders}" /><i></i></li>
+				<li><label>&nbsp;</label><input type="submit"
+					class="btn btn-success" value="确认保存" /></li>
+			</ul>
+		</form>
+		<!-- 内容end -->
+
+
+		<!-- 内容end -->
+			<input type="hidden" id="pagecount" value="{$pagecount}" /> <input
+			type="hidden" id="itemscount" value="{$itemscount}" /> <input
+			type="hidden" id="pageno" value="{$pageno}" /> <input type="hidden"
+			id="size" value="12" />
+		<!-- 底部start -->
+		<include file="Public:script" />
+		<!-- <script type="text/javascript" src="__PUBLIC__/js/index/addmyuser.js"></script> -->
+		<!--     <script src="__PUBLIC__/js/jquery.validate.min.js" type="text/javascript" ></script>
+   <script type="text/javascript" src="__PUBLIC__/js/pass_validata.js"></script> -->
+		<!-- 底部end -->
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="__PUBLIC__/css/main.css"  type="text/css" />
+</head>
+<body>
+	<if condition="!empty($_SESSION['user'])"> <span
+		style="font-size: 20px;">您好，用户{$user['name']}<br />您的总业绩为<b>{$user['yeji']}</b><br />
+		已结算为<b>{$user['ticheng']}</b><br />可结算为<b>{$balance}</b><br />已消费为<b>{$user['xiaofei']}</b></span>
+	<br />
+	<div id="canvasDiv" style="margin-top: 15px;"></div>
+	<else /> <span style="font-size: 20px;">欢迎您、来自{$province}{$city}的朋友。您的访问IP为{$ip}<br /></span>
+	</if>
+  	<!-- 内容end -->
+    <input type="hidden" id="zongticheng" value="{$user['yeji']}"/>
+    <input type="hidden" id="ticheng" value="{$user['ticheng']}"/>
+    <input type="hidden" id="kejiesuan" value="{$balance}"/>
+    <input type="hidden" id="kexiaofei" value="{$user['xiaofei']}"/>
+	<include file="Public:script" />
+     <script type="text/javascript" src="__PUBLIC__/js/ichart.1.2.js"></script>
+     <script type="text/javascript" src="__PUBLIC__/js/index.js"></script>
+</body>
+</html>

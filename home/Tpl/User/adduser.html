@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+<link rel="stylesheet" href="__PUBLIC__/css/add.css" type="text/css"
+	media="screen" />
+
+</head>
+<body>
+	<div class="div_from_aoto" style="width: 320px;">
+		<FORM action="__ROOT__/index.php/adduser" method="post">
+			<DIV class="control-group">
+				<label class="laber_from">登录名</label>
+				<DIV class="controls">
+					<INPUT class="input_from" onblur="" required="required" required="required" type="text" name="name"
+						placeholder=" 请输入登录名称"><P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<LABEL class="laber_from">姓名</LABEL>
+				<DIV class="controls">
+					<INPUT class="input_from"  required="required" type="text" name="nickname"
+						placeholder=" 请输入姓名"><P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<LABEL class="laber_from">性别</LABEL>
+				<DIV class="controls">
+					男<INPUT  checked="checked" type="radio" value="男" name="sex" >&nbsp;&nbsp;
+					女<INPUT   type="radio" value="女" name="sex" ><P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<LABEL class="laber_from">电话</LABEL>
+				<DIV class="controls">
+					<INPUT class="input_from" required="required" type="text" name="tele"
+						placeholder=" 请输入电话"><P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<LABEL class="laber_from">账户金额</LABEL>
+				<DIV class="controls">
+					<INPUT class="input_from" required="required" type="text" name="balance"
+						placeholder=" 请输入账户金额"><P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<LABEL class="laber_from">角色</LABEL>
+				<DIV class="controls">
+					<select name="roleid">
+						<volist name="rolelist" id="role">
+						<option value="{$role.id}">{$role.name}</option>
+						</volist>
+					</select>
+					<P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<LABEL class="laber_from">邮箱</LABEL>
+				<DIV class="controls">
+					<INPUT class="input_from" required="required" type="text" name="email"
+						placeholder="请输入邮箱"><P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<LABEL class="laber_from"></LABEL>
+				<DIV class="controls">
+					<button type="submit" class="btn btn-success" style="width: 200px;">确认</button>
+				</DIV>
+			</DIV>
+		</FORM>
+	</div>
+</body>
+</html>

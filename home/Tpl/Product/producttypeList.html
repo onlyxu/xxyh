@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/kkpager.css" />
+</head>
+<body>
+
+	<div class="mian_content">
+		<div id="page_content">
+			<button class="btn btn-success" onclick="addtype()"
+				style="width: 80px; height: 30px; margin-bottom: 10px;">新增</button>
+			<button class="btn btn-info" onclick="deleteall()"
+				style="width: 80px; height: 30px; margin-bottom: 10px;">删除</button>
+			<!-- 主要内容start -->
+			<table class="tablelist" border="1">
+				<thead>
+					<tr>
+						<th width="100"><input type="checkbox" onclick="selectAll()" />序号</th>
+						<th>分类名称</th>
+						<th width="180">创建时间</th>
+						<th width="200">操作</th>
+					</tr>
+				</thead>
+				<tbody id="tablebody">
+					<volist name="items" id="vo" key="i">
+					<tr>
+						<td><input type="checkbox" name="itemid" value="{$vo.id}" />{$i}</td>
+						<td><a href="javascript:edittype({$vo.id},'{$vo.name}')">{$vo.name}</a></td>
+						<td>{$vo.dtime}</td>
+						<td><a href="__ROOT__/index.php/deleteprotype?ids={$vo.id}">删除</a></td>
+					</tr>
+					</volist>
+				</tbody>
+			</table>
+			<!-- 主要内容end -->
+			<!-- 主要内容分页start -->
+			<div id="kkpager"></div>
+			<!-- 主要内容分页end -->
+		</div>
+
+	</div>
+
+	<!-- 内容end -->
+	<!-- 底部start -->
+	<input type="hidden" id="pagecount" value="{$pagecount}" />
+	<input type="hidden" id="itemscount" value="{$itemscount}" />
+	<input type="hidden" id="pageno" value="{$pageno}" />
+	<input type="hidden" id="size" value="12" />
+	<include file="Public:script" />
+	<script type="text/javascript" src="__PUBLIC__/js/kkpager.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/index/producttype.js"></script>
+
+	<!-- 底部end -->
+</body>
+</html>

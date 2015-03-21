@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0}
+body{ font-size:12px; font-family:microsoft yahei}
+ul,ol{ list-style:none;}
+
+.clear{ clear:both}
+.w185{ width:185px}
+.fl{ float:left}
+.pt10{ padding-top:10px;}
+.none{ display:none}
+
+.loginBg{width:1200px; height:800px; margin:0 auto; background:url(../images/loginBg.png) no-repeat}
+.loginCent{width:490px; margin:0 auto; padding-top:320px;}
+.loginCent .textUser{width:146px; height:20px; line-height:20px; border:0; margin-left:120px; margin-top:5px;}
+.loginCent .textPwd{width:146px; height:20px; line-height:20px; border:0; margin-left:120px; margin-top:15px;}
+.loginCent .textYzm{width:60px; height:20px; line-height:20px; border:0; margin-left:120px; margin-top:16px;}
+.loginCent .loginBtn{ padding-left:60px; padding-top:20px}
+
+
+.content{width:991px; margin:0 auto}
+.head{width:991px; height:101px; margin:0 auto; background:url(../images/head.png) no-repeat}
+.titleBg{height:31px; width:185px; line-height:31px; text-indent:10px; background:url(../images/titleBg.png) no-repeat; color:#fff; font-size:12px; font-weight:normal}
+.functionList{float:left; background:#a0bad1; line-height:30px; width:185px; color:#fff;}
+.functionList li{height:30px; clear:both}
+.right{float:left; margin-right:5px; margin-left:5px;}
+.functionList li p{line-height:30px; background:#fff; color:#000;}
+.functionList li p span a{line-height:30px; background:#fff; color:#000;text-decoration: none;}
+.functionList li p span a:hover{line-height:30px; background:#fff; color:#000;text-decoration: underline;}
+.down{ float:left; margin-right:5px; margin-left:5px;}
+.functionList li ol{float:left; background:#bbd1e8; color:#093961; line-height:25px; text-indent:20px; width:100%;}
+
+.rightCont{ float:right; width:790px; padding-top:10px;}
+.rightCont .contBg{border-radius:5px 5px 0 0; background:#fff; width:100%; height: 1800px;}
+
+.titleBg a{
+	color:#fff;
+	text-decoration: none;
+	text-align: center;
+}
+
+.titleBg a:hover{
+	color:#093961;
+	text-decoration: underline;
+	text-align: center;
+}
+
+.headRight li a{
+	color:#fff;
+	text-decoration: none;
+	text-align: center;
+}
+.headRight li a:hover{
+	color:#093961;
+	text-decoration: underline;
+	text-align: center;
+}
+
+.headRight{width:350px; height:30px; background:url(images/topRight.png); float:right}
+.headRight li{width:85px; float:left; text-align:center; line-height:35px; color:#fff}

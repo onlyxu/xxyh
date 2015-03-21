@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+<link rel="stylesheet" href="__PUBLIC__/dtree/dtree.css" type="text/css">
+</head>
+<body>
+
+	<div class="rightinfo" id="rightinfo" style="font-size: 20px;">
+		<!-- 主要内容start -->
+
+		<!-- 内容end -->
+	</div>
+
+	<!-- 内容end -->
+	<input type="hidden" id="userid" value="{$_SESSION['user']['id']}" />
+	<input type="hidden" id="username" value="{$_SESSION['user']['name']}" />
+	<input type="hidden" id="userpid" value="{$_SESSION['user']['pid']}" />
+	<!-- 底部start -->
+	<include file="Public:script" />
+	<script type="text/javascript" src="__PUBLIC__/dtree/dtree.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/index/mychild.js"></script>
+	<!-- 底部end -->
+</body>
+</html>

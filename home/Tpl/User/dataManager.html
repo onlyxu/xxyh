@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/kkpager.css" />
+</head>
+<body>
+
+	<div class="rightinfo">
+		<button class="btn btn-success" onclick="addType()"
+			style="width: 80px; height: 30px; margin-bottom: 10px;">新增分类</button>
+		<button class="btn btn-success" onclick="addData()"
+			style="width: 80px; height: 30px; margin-bottom: 10px;">新增值</button>
+		<button class="btn btn-info" onclick="deleteall()"
+			style="width: 80px; height: 30px; margin-bottom: 10px;">删除</button>
+		<!-- 主要内容start -->
+		<table class="tablelist" border="1">
+			<thead>
+				<tr>
+					<th width="80"><input type="checkbox" onclick="selectAll()" />序号</th>
+					<th width="200">字典值</th>
+					<th width="150">排序</th>
+					<th width="100">分类名称</th>
+					<th width="100">分类关键字</th>
+					<th width="100">启用状态</th>
+					<th width="100">操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<volist name="items" id="vo" key="i">
+				<tr>
+					<td><input type="checkbox" name="itemid" value="{$vo.id}" />{$i}</td>
+					<td><a href="javascript:editinfo({$vo.id})">{$vo.vals}</a></td>
+					<td>{$vo.orders}</td>
+					<td>{$vo.name}</td>
+					<td>{$vo.keyword}</td>
+					<if condition="$vo.enabled eq 2">
+					<td>未启用</td>
+					<td><input type="button" onclick="checkAccept({$vo.id},1)"
+						class="btn btn-primary" style="width: 50px; height: 30px;"
+						value="启用" /></td>
+					<else />
+					<td>已启用</td>
+					<td><input type="button" onclick="checkAccept({$vo.id},2)"
+						class="btn btn-warning" style="width: 50px; height: 30px;"
+						value="禁用" /> </td>
+					</if>
+				</tr>
+				</volist>
+			</tbody>
+		</table>
+		<div class="pagin" id="kkpager"></div>
+		<!-- 内容end -->
+	</div>
+
+	<!-- 内容end -->
+	<input type="hidden" id="pagecount" value="{$pagecount}" />
+	<input type="hidden" id="itemscount" value="{$itemscount}" />
+	<input type="hidden" id="pageno" value="{$pageno}" />
+	<input type="hidden" id="size" value="12" />
+	<!-- 底部start -->
+	<include file="Public:script" />
+	<script type="text/javascript" src="__PUBLIC__/js/kkpager.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/index/datamanager.js"></script>
+	<!-- 底部end -->
+</body>
+</html>

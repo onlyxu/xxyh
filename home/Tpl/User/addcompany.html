@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+<link rel="stylesheet" href="__PUBLIC__/css/add.css" type="text/css"
+	media="screen" />
+<link rel="stylesheet"
+	href="__PUBLIC__/kindeditor-4.1.10/themes/default/default.css" />
+<link rel="stylesheet"
+	href="__PUBLIC__/kindeditor-4.1.10/plugins/code/prettify.css" />
+
+</head>
+<body>
+
+	<!-- 主要内容start -->
+	<div class="div_from_aoto">
+		<form action="__ROOT__/index.php/newcompany" method="post">
+			<input type="hidden" name="id" value="{$company.id}" />
+			<DIV class="control-group">
+				<label class="laber_from">公司名称:</label>
+				<DIV class="controls">
+					<INPUT class="input_from" style="width: 400px;" type="text"
+						name="name" value="{$company.name}" placeholder="请输入公司名称">
+					<P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<label class="laber_from">公司详情:</label>
+				<DIV class="controls">
+					<textarea name="content"
+						style="width: 800px; height: 400px; visibility: hidden;" id=""
+						cols="30" rows="10" class="textarea">{$company.desc}</textarea>
+					<P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<LABEL class="laber_from"></LABEL>
+				<DIV class="controls">
+					<button type="submit" class="btn btn-success" style="width: 200px;">确认</button>
+				</DIV>
+			</DIV>
+		</form>
+	</div>
+	<!-- 主要内容分页end -->
+	<!-- 内容end -->
+	<input type="hidden" id="pagecount" value="{$pagecount}" />
+	<input type="hidden" id="itemscount" value="{$itemscount}" />
+	<input type="hidden" id="pageno" value="{$pageno}" />
+	<input type="hidden" id="size" value="12" />
+	<!-- 底部start -->
+	<include file="Public:script" />
+	<script charset="utf-8"
+		src="__PUBLIC__/kindeditor-4.1.10/kindeditor-min.js"></script>
+	<script charset="utf-8"
+		src="__PUBLIC__/kindeditor-4.1.10/lang/zh_CN.js"></script>
+	<script charset="utf-8"
+		src="__PUBLIC__/kindeditor-4.1.10/plugins/code/prettify.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/index/addproduct.js"></script>
+	<!-- 底部end -->
+</body>
+</html>

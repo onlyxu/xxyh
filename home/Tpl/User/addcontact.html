@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+<link rel="stylesheet" href="__PUBLIC__/css/add.css" type="text/css"
+	media="screen" />
+
+</head>
+<body>
+	<div class="div_from_aoto" style="width: 320px;">
+		<FORM action="__ROOT__/index.php/newcontact" method="post">
+		<input type="hidden" name="id"  value="{$contact.id}" />
+			<DIV class="control-group">
+				<label class="laber_from">用户名</label>
+				<DIV class="controls">
+					<INPUT class="input_from" type="text" value="{$contact.name}" name="name"
+						placeholder=" 请输入联系人姓名"><P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<LABEL class="laber_from">昵称</LABEL>
+				<DIV class="controls">
+					<INPUT class="input_from" type="text" value="{$contact.nickname}" name="nickname"
+						placeholder=" 请输入联系人昵称"><P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<LABEL class="laber_from">电话</LABEL>
+				<DIV class="controls">
+					<INPUT class="input_from" type="text" value="{$contact.tele}" name="tele"
+						placeholder=" 请输入联系人电话"><P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<LABEL class="laber_from">办公电话</LABEL>
+				<DIV class="controls">
+					<INPUT class="input_from" type="text" value="{$contact.phones}" name="phones"
+						placeholder=" 请输入联系人办公电话"><P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<LABEL class="laber_from">住址</LABEL>
+				<DIV class="controls">
+					<INPUT class="input_from" type="text" value="{$contact.addr}" name="addr"
+						placeholder=" 请输入联系人住址"><P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<LABEL class="laber_from">邮箱</LABEL>
+				<DIV class="controls">
+					<INPUT class="input_from" type="text" value="{$contact.email}" name="email"
+						placeholder=" 请输入联系人住址"><P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<LABEL class="laber_from"></LABEL>
+				<DIV class="controls">
+					<button type="submit" class="btn btn-success" style="width: 200px;">确认</button>
+				</DIV>
+			</DIV>
+		</FORM>
+	</div>
+</body>
+</html>

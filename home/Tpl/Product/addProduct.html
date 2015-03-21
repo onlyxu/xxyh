@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/css.css" />
+<link rel="stylesheet" href="__PUBLIC__/css/add.css" type="text/css"
+	media="screen" />
+<link rel="stylesheet"
+	href="__PUBLIC__/kindeditor-4.1.10/themes/default/default.css" />
+<link rel="stylesheet"
+	href="__PUBLIC__/kindeditor-4.1.10/plugins/code/prettify.css" />
+
+</head>
+<body>
+
+	<!-- 主要内容start -->
+	<div class="div_from_aoto">
+		<form action="__ROOT__/index.php/newproduct" method="post">
+		<input type="hidden" name="id" value="{$product.id}" />
+			<DIV class="control-group">
+				<label class="laber_from">产品名称:</label>
+				<DIV class="controls">
+					<INPUT class="input_from" style="width: 400px;" type="text"
+						name="name" value="{$product.name}" placeholder="请输入产品名称">
+					<P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<label class="laber_from">产品分类:</label>
+				<DIV class="controls">
+					<select name="typeid" class="input_select" style="width: 400px;">
+						<volist name="typelist" id="vo" key="i">
+							<if condition="$product['typeid'] eq $vo['id'] ">
+								<option selected="selected" value="{$vo.id}">{$vo.name}</option>
+								<else/>
+								<option value="{$vo.id}">{$vo.name}</option>
+							</if>
+						</volist>
+					</select>
+					<P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<label class="laber_from">市场价格:</label>
+				<DIV class="controls">
+					<INPUT class="input_from" style="width: 400px;" type="text"
+						name="price" value="{$product.price}" placeholder="请输入产品价格">
+					<P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<label class="laber_from">产品货号:</label>
+				<DIV class="controls">
+					<INPUT class="input_from" style="width: 400px;" type="text"
+						name="prono" value="{$product.prono}" placeholder="请输入产品货号">
+					<P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<label class="laber_from">会员价格:</label>
+				<DIV class="controls">
+					<INPUT class="input_from" style="width: 400px;" type="text"
+						name="price_vip" value="{$product.price_vip}" placeholder="请输入产品价格">
+					<P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<label class="laber_from">分销价格:</label>
+				<DIV class="controls">
+					<INPUT class="input_from" style="width: 400px;" type="text"
+						name="price_pifa" value="{$product.price_pifa}" placeholder="请输入产品价格">
+					<P class=help-block></P>
+				</DIV>
+			</DIV>
+				<DIV class="control-group">
+				<label class="laber_from">产品PV:</label>
+				<DIV class="controls">
+					<INPUT class="input_from" style="width: 400px;" type="text"
+						name="counts" value="{$product.counts}" placeholder="请输入产品价格">
+					<P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<label class="laber_from">展示状态:</label>
+				<DIV class="controls">
+				<if condition="$product['enabled'] eq 1">
+					<input type="radio" checked="checked" style="width: 50px; height: 15px;"
+						name="enabled"  value="1" />前台显示
+					<input type="radio" style="width: 50px; height: 15px;" name="enabled"
+						value="2" />前台隐藏
+						<else/>
+					<input type="radio" style="width: 50px; height: 15px;"
+						name="enabled"  value="1" />前台显示
+					<input type="radio" checked="checked" style="width: 50px; height: 15px;" name="enabled"
+						value="2" />前台隐藏
+				</if>
+					<P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<label class="laber_from">产品缩略图:</label>
+				<DIV class="controls">
+					<input type="hidden" value="{$product.imgpath}" id="uploads" name="uploads" /> <input
+						type="button" id="uploadButton" value="选择文件" /> <span class=""
+						id="img_td"><img id="uploadimgs" style="float: right;margin-right: 100px;margin-bottom: 10px;" src="{$product.imgpath}" width="100" height="100" /></span>
+					<P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<label class="laber_from">产品内容:</label>
+				<DIV class="controls">
+					<textarea name="content"
+						style="width: 800px; height: 300px; visibility: hidden;" id=""
+						cols="30" rows="10" class="textarea">{$product.info}</textarea>
+					<P class=help-block></P>
+				</DIV>
+			</DIV>
+			<DIV class="control-group">
+				<LABEL class="laber_from"></LABEL>
+				<DIV class="controls">
+					<button type="submit" class="btn btn-success" style="width: 200px;">确认</button>
+				</DIV>
+			</DIV>
+		</form>
+	</div>
+	<!-- 主要内容分页end -->
+
+	<!-- 内容end -->
+	<input type="hidden" id="pagecount" value="{$pagecount}" />
+	<input type="hidden" id="itemscount" value="{$itemscount}" />
+	<input type="hidden" id="pageno" value="{$pageno}" />
+	<input type="hidden" id="size" value="12" />
+	<!-- 底部start -->
+	<include file="Public:script" />
+	<script charset="utf-8"
+		src="__PUBLIC__/kindeditor-4.1.10/kindeditor-min.js"></script>
+	<script charset="utf-8"
+		src="__PUBLIC__/kindeditor-4.1.10/lang/zh_CN.js"></script>
+	<script charset="utf-8"
+		src="__PUBLIC__/kindeditor-4.1.10/plugins/code/prettify.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/index/addproduct.js"></script>
+	<!-- 底部end -->
+</body>
+</html>
