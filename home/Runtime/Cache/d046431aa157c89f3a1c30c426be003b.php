@@ -3,7 +3,7 @@
 <head>
 	<!--head内容-->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>销售管理平台</title>
+<title>满满商贸销售管理平台</title>
 <link rel="stylesheet" href="__PUBLIC__/css/style.css" />
 	<!--head内容END-->
 </head>

@@ -12,7 +12,7 @@ $(document).ready(function(){
 	       //总数据条数
 	       totalRecords : itemscount,
 	       //链接前部
-	       hrefFormer : cpath+'/index.php/allpaylog',
+	       hrefFormer : cpath+'/index.php/allticheng',
 	       //链接尾部
 	       hrefLatter : '',
 	       getLink : function(n){

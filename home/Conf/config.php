@@ -19,6 +19,7 @@ return array(
 		'SESSION_AUTO_START' => true, //是否开启session
 		'URL_ROUTER_ON'   => true, //开启路由
 		'URL_ROUTE_RULES' => array( //定义路由规则
+				'test'=>'Index/test',//系统首页
 			 'index'=>'Index/index',//系统首页
 			 'main'=>'Index/main',//系统首页
 			 'indexproduct'=>'Product/getIndexProduct',//前台产品信息

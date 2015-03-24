@@ -3,8 +3,8 @@
 <head>
 <title>Org Chart Editor</title>
 <script src="__PUBLIC__/release/go.js"></script>
-<link href="__PUBLIC__/assets/css/goSamples.css" rel="stylesheet" type="text/css"/>
-<script src="__PUBLIC__/release/goSamples.js"></script>
+<link href="__PUBLIC__/assets/css/goSamples.css" rel="stylesheet" type="text/css"/>  <!-- you don't need to use this -->
+<script src="__PUBLIC__/release/goSamples.js"></script>  <!-- this is only for the GoJS Samples framework -->
 <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 <script>
   function init() {
@@ -68,7 +68,7 @@
             var shape = node.findObject("SHAPE");
             if (shape) {
               shape._prevFill = shape.fill;  // remember the original brush
-              shape.fill = "white";
+              shape.fill = "darkred";
             }
           },
           mouseDragLeave: function (e, node, next) {
@@ -94,6 +94,7 @@
         // for sorting, have the Node.text be the data.name
         new go.Binding("text", "name"),
         // bind the Part.layerName to control the Node's layer depending on whether it isSelected
+        new go.Binding("layerName", "isSelected", function(sel) { return sel ? "Foreground" : ""; }).ofObject(),
         // define the node's outer shape
         $(go.Shape, "Rectangle",
           {
@@ -115,6 +116,7 @@
               margin: new go.Margin(6, 10, 0, 3),
               defaultAlignment: go.Spot.Left
             },
+            $(go.RowColumnDefinition, { column: 2, width: 4 }),
             $(go.TextBlock, textStyle(),  // the name
               {
                 row: 0, column: 0, columnSpan: 5,
@@ -157,28 +159,22 @@
   }
 
   function load() {
-	  var cpath=$("#cpath").val();
-	  $.getJSON(cpath+"/index.php/mychild",{},function(json){
+	  $.getJSON("/xxyh/index.php/mychild",{},function(json){
 		  var str='{ "class": "go.TreeModel","nodeDataArray": [';
 		  var items = json.child;
 		  var len = items.length;
-		  var uid = $("#userid").val();
-		  var uname = $("#username").val();
-		  var xf = $("#xiaofei").val();
-		  str+='{"key":"'+uid+'", "name":"'+uname+'", "title":"'+xf+'"}';
-		  if(len!=0)
-			 {
-				str+=',';
-			 }
-
 		 $.each(items,function(index,item){
 				 var totalbance = item.totalbalance;
 				if(!totalbance)
 				{
 					totalbance=0;
 				}
-
-			 	str+='{"key":"'+item.id+'", "name":"'+item.name+'", "title":"'+totalbance+'", "parent":"'+item.pid+'"}';
+			 	if(index==0)
+			 	{
+			 		str+='{"key":"'+item.id+'", "name":"'+item.name+'", "title":"'+totalbance+'"}';
+			 	}else{
+			 		str+='{"key":"'+item.id+'", "name":"'+item.name+'", "title":"'+totalbance+'", "parent":"'+item.pid+'"}';
+			 	}
 
 				if(index<len-1)
 				{
@@ -197,9 +193,5 @@
 <body onload="init()">
 
   <div id="myDiagram" style="background-color: #696969; border: solid 1px black; height: 500px"></div>
-   <input type="hidden" id="userid" value="{$_SESSION['user']['id']}" />
-	<input type="hidden" id="username" value="{$_SESSION['user']['name']}" />
-	<input type="hidden" id="xiaofei" value="{$_SESSION['user']['xiaofei']}" />
-	<input type="hidden" id="cpath" value="__ROOT__" />
 </body>
 </html>

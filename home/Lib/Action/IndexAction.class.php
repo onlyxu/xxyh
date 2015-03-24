@@ -2,6 +2,11 @@
 
 class IndexAction extends CommonAction {
 
+	public function test()
+	{
+		$this->display("test");
+	}
+
     public function index(){
     	$user = session("user");
     	if($user)
